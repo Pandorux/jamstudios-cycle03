@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IState {
+public interface IState<T> {
     
     void ChangeState();
-    void SetState();
-    void GetState();
+    void SetState(T s);
+    T GetState();
 
 }

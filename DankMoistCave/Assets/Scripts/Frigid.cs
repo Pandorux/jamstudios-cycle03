@@ -1,16 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Frigid : MonoBehaviour {
+public class Frigid : MonoBehaviour, IState<EnemyState> {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField]
+    private EnemyState m_state;
+
+    public void ChangeState()
+    {
+        throw new NotImplementedException();
+    }
+
+    public EnemyState GetState()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetState(EnemyState s)
+    {
+        throw new NotImplementedException();
+    }
+
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PressurePlate : MonoBehaviour, IState {
+public class PressurePlate : MonoBehaviour, IState<bool> {
 
     [SerializeField]
     private bool m_isActive = false;
@@ -28,12 +28,12 @@ public class PressurePlate : MonoBehaviour, IState {
         throw new NotImplementedException();
     }
 
-    public void SetState()
+    public void SetState(bool s)
     {
         throw new NotImplementedException();
     }
 
-    public void GetState()
+    public bool GetState()
     {
         throw new NotImplementedException();
     }

@@ -11,5 +11,5 @@ public interface ILight {
     int GetLightIntensity();
     void SetWarmth(int w);
     int GetWarmth();
-
+    
 }
