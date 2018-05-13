@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Jared_Test00.unity
+=======
+- path: Assets/_Scenes/Level01.unity
+>>>>>>> Level-Design
   isLoaded: 1
   isActive: 1
