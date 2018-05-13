@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PressurePlate : MonoBehaviour, IState<bool> {
+[RequireComponent(typeof(BoxCollider2D))]
+public class PressurePlate : MonoBehaviour
+{
 
     [SerializeField]
     private bool m_isActive = false;
@@ -14,27 +16,38 @@ public class PressurePlate : MonoBehaviour, IState<bool> {
     public UnityEvent m_Off;
 
     // Use this for initialization
-    void Start () {
-	    	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void ChangeState()
+    void Start()
     {
-        throw new NotImplementedException();
+        if (m_isActive)
+        {
+            InvokeOn();
+        }
+    }
+    
+    public bool IsPressed()
+    {
+        return m_isActive;
     }
 
-    public void SetState(bool s)
+    void OnTriggerEnter()
     {
-        throw new NotImplementedException();
+        InvokeOff();
+        m_isActive = true;
     }
 
-    public bool GetState()
+    void OnTriggerExit()
     {
-        throw new NotImplementedException();
+        InvokeOn();
+        m_isActive = false;
+    }
+
+    public void InvokeOn()
+    {
+        m_On.Invoke();
+    }
+
+    public void InvokeOff()
+    {
+        m_Off.Invoke();
     }
 }
