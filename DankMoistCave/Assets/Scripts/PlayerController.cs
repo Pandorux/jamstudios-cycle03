@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour, ILight, IDeath {
+    public void ChangeState()
+    {
+        throw new NotImplementedException();
+    }
 
     public void DestroyThis()
     {
@@ -21,6 +25,11 @@ public class PlayerController : MonoBehaviour, ILight, IDeath {
     }
 
     public LightType GetLightType()
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool GetState()
     {
         throw new NotImplementedException();
     }
@@ -51,6 +60,11 @@ public class PlayerController : MonoBehaviour, ILight, IDeath {
     }
 
     public void SetLightType(LightType type)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetState(bool s)
     {
         throw new NotImplementedException();
     }

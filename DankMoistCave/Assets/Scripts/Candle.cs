@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Candle : MonoBehaviour, ILight {
+    public void ChangeState()
+    {
+        throw new NotImplementedException();
+    }
 
     public int GetLightIntensity()
     {
@@ -11,6 +15,11 @@ public class Candle : MonoBehaviour, ILight {
     }
 
     public LightType GetLightType()
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool GetState()
     {
         throw new NotImplementedException();
     }
@@ -31,6 +40,11 @@ public class Candle : MonoBehaviour, ILight {
     }
 
     public void SetLightType(LightType type)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SetState(bool s)
     {
         throw new NotImplementedException();
     }

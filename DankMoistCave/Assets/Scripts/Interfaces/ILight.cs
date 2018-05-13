@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ILight {
+public interface ILight : IState<bool> {
 
-    bool IsLightOn();
     LightType GetLightType();
-    void SetLightType(LightType type);
     void SetLightIntensity(int str);
     int GetLightIntensity();
     void SetWarmth(int w);

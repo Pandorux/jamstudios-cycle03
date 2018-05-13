@@ -710,6 +710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914945660}
   - component: {fileID: 1914945661}
+  - component: {fileID: 1914945662}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -752,6 +753,23 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1914945662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1914945659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0ffb6ada0342e43a323cd4fbc3f8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 0}
+  intensity: 0
+  warmth: 0
+  lightOn: 0
+  voltage: 0
+  maxVoltage: 100
 --- !u!1 &2024346908
 GameObject:
   m_ObjectHideFlags: 0
