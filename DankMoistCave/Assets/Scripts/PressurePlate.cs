@@ -9,19 +9,19 @@ public class PressurePlate : Switch {
 
     public bool IsPressed()
     {
-        return m_isActive;
+        return m_IsOn;
     }
 
     void OnTriggerEnter()
     {
         InvokeOff();
-        m_isActive = true;
+        m_IsOn = true;
     }
 
     void OnTriggerExit()
     {
         InvokeOn();
-        m_isActive = false;
+        m_IsOn = false;
     }
 
 }

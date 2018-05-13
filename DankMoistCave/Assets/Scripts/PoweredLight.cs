@@ -41,7 +41,7 @@ public class PoweredLight : LightBase, IPowered<int>
 
     #endregion
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
     }

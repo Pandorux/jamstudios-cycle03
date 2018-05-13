@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Switch : MonoBehaviour {
 
     [SerializeField]
-    protected bool m_isActive = false;
+    protected bool m_IsOn = false;
 
     [Tooltip("The methods that will be called when the pressure plate is stood on")]
     [SerializeField]
@@ -19,7 +19,7 @@ public class Switch : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        if (m_isActive)
+        if (m_IsOn)
         {
             InvokeOn();
         }
