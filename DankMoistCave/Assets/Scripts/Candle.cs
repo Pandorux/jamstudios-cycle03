@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Candle : MonoBehaviour, ILight {
+
     public void ChangeState()
     {
         throw new NotImplementedException();
