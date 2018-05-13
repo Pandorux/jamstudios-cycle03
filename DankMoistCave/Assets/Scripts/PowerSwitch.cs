@@ -29,9 +29,14 @@ public class PowerSwitch : Switch, IInteractable
         return gameObject.active;
     }
 
+    public void SetInteractability(bool b)
+    {
+        throw new NotImplementedException();
+    }
+
     #endregion
 
-    void TriggerOnStay(Collider c)
+    void IInteractable.TriggerOnStay(Collider c)
     {
         if(c.gameObject.tag == "Player")
         {

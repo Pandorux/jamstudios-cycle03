@@ -3,55 +3,140 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Candle : MonoBehaviour, ILight {
+public class Candle : LightBase, IInteractable, IDeath
+{
+    #region Variables
 
-    public void ChangeState()
+    [Tooltip("How long a candle will burn for")]
+    [Range(0, 120)]
+    [SerializeField]
+    private float m_burnDuration = 10;
+
+    [Tooltip("How long until candle fully fades from view")]
+    [Range(0, 15)]
+    [SerializeField]
+    private float m_FadeDuration = 3;
+
+    private float m_burnTimeLeft;
+    private bool m_IsAlive = true;
+
+    #endregion
+
+    #region Interface Methods
+
+    public void Interact()
     {
-        throw new NotImplementedException();
+        ChangeState();
     }
 
-    public int GetLightIntensity()
+    // TODO: doesn't return correct value
+    public bool IsInteractable()
     {
-        throw new NotImplementedException();
+        return gameObject.active;
     }
 
-    public LightType GetLightType()
+    public void TriggerOnStay(Collider c)
     {
-        throw new NotImplementedException();
+        if(c.gameObject.tag == "Player")
+        {
+            // TODO: Check if player presses button
+            // Interact()
+        }
     }
 
-    public bool GetState()
+    public void SetInteractability(bool b)
     {
-        throw new NotImplementedException();
+        foreach(Collider c in GetComponents<Collider>())
+        {
+            c.enabled = b;
+        } 
     }
 
-    public int GetWarmth()
+    public void DestroyThis()
     {
-        throw new NotImplementedException();
+        Destroy(gameObject);
     }
 
-    public bool IsLightOn()
+    public bool IsAlive()
     {
-        throw new NotImplementedException();
+        return m_IsAlive;
     }
 
-    public void SetLightIntensity(int str)
+    public void SetAlive(bool a)
     {
-        throw new NotImplementedException();
+        m_IsAlive = a;
     }
 
-    public void SetLightType(LightType type)
+    // TODO: Need to Refine this
+    public void Fade(float dur)
     {
-        throw new NotImplementedException();
+        SpriteRenderer s = GetComponent<SpriteRenderer>();
+        Color32 col = s.color;
+
+        int speed = (int)(col.a / dur);
+        col = new Color32(col.r, col.b, col.g, (byte)(col.a - speed));
+        s.color = col;
+
+        if(col.a > 0)
+        {
+            Fade(dur);
+        }
+        else
+        {
+            DestroyThis();
+        }
     }
 
-    public void SetState(bool s)
+    #endregion
+
+    /// <summary>
+    /// Get the amount of time left that the candle can burn
+    /// </summary>
+    /// <returns></returns>
+    public float GetTimeLeft()
     {
-        throw new NotImplementedException();
+        return m_burnTimeLeft;
     }
 
-    public void SetWarmth(int w)
+    public float GetLifeTime()
     {
-        throw new NotImplementedException();
+        return m_burnDuration;
     }
+
+    /// <summary>
+    /// Reduces Time Left for Candle unless Time Left leff than or equal to 0
+    /// </summary>
+    protected void BurnTick()
+    {
+        if (GetTimeLeft() <= 0)
+        {
+            m_burnTimeLeft--;
+        }
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+    }
+
+    protected virtual void Update()
+    {
+        if(GetTimeLeft() <= 0 && IsAlive())
+        {
+            SetAlive(false);
+            SetState(false);
+            SetInteractability(false);
+            Fade(m_FadeDuration);
+        }
+    }
+
+    protected virtual void FixUpdate()
+    {
+        if(GetState())
+        {
+            BurnTick();
+        }
+    }
+
+
 }
