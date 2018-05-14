@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Candle : LightBase, IInteractable, IDeath
+public class Candle : LightBase, IInteractable, IDeath, IHoldable
 {
     #region Variables
 
@@ -19,6 +19,10 @@ public class Candle : LightBase, IInteractable, IDeath
 
     private float m_burnTimeLeft;
     private bool m_IsAlive = true;
+
+    [Tooltip("Is this item being hold by something?")]
+    [SerializeField]
+    private bool m_BeingHold = false;
 
     #endregion
 
@@ -85,6 +89,31 @@ public class Candle : LightBase, IInteractable, IDeath
         {
             DestroyThis();
         }
+    }
+
+    public bool CanBePickedUp()
+    {
+        if(!GetState())
+        {
+            return true;
+        }
+    }
+
+    public bool IsBeingHold()
+    {
+        return m_BeingHold;
+    }
+
+    public void PickUp(ref IHolder holder)
+    {
+        holder.AddItem(this);
+        m_BeingHold = true;
+    }
+
+    public void PutDown(ref IHolder holder)
+    {
+        holder.RemoveItem();
+        m_BeingHold = false;
     }
 
     #endregion
