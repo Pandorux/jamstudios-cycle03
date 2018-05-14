@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, ILight, IDeath {
+public class PlayerController : MonoBehaviour, ILight, IDeath
+{
     public bool CanStateChange()
     {
         throw new NotImplementedException();
@@ -49,27 +50,12 @@ public class PlayerController : MonoBehaviour, ILight, IDeath {
         throw new NotImplementedException();
     }
 
-    public bool IsLightOn()
-    {
-        throw new NotImplementedException();
-    }
-
     public void SetAlive(bool a)
     {
         throw new NotImplementedException();
     }
 
     public void SetLightIntensity(int str)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void SetLightType(LightType type)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void SetState(bool s)
     {
         throw new NotImplementedException();
     }

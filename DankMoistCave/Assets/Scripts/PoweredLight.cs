@@ -48,5 +48,6 @@ public class PoweredLight : LightBase, IPowered<int>
 
     void Update()
     {
+
     }
 }

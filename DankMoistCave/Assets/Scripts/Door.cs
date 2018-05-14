@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour, IPowered<int>, IState<bool> {
+
     [Tooltip("Amount of power being channeled into this device.")]
     [SerializeField]
     protected int m_voltage = 0;

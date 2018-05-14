@@ -5,5 +5,6 @@ using UnityEngine;
 public enum EnemyState {
     Wander = 0,
     Alert = 1,
-    Chase = 2    
+    Chase = 2,
+    Afraid = 3 
 }
