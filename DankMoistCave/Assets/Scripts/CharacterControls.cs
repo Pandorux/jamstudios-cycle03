@@ -11,7 +11,7 @@ public class CharacterControls : MonoBehaviour {
     public KeyCode[] Pause;
     public KeyCode[] Restart;
 
-    public bool GetKeysDown(KeyCode[] keycodes)
+    public static bool GetKeysDown(KeyCode[] keycodes)
     {
         foreach (KeyCode kc in keycodes)
         {
@@ -24,7 +24,7 @@ public class CharacterControls : MonoBehaviour {
         return false;
     }
 
-    public bool GetKeyDown(KeyCode keycode)
+    public static bool GetKeyDown(KeyCode keycode)
     {
         if (Input.GetKeyDown(keycode))
         {

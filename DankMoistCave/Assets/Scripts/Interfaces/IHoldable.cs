@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IHoldable : MonoBehaviour {
+public interface IHoldable {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    bool CanBePickedUp();
+    bool IsBeingHold();
+    void PickUp(ref IHolder holder);
+    void PutDown(ref IHolder holder);
+
 }

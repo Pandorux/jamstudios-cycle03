@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : SingletonBase<PlayerController>
+public class PlayerController : SingletonBase<PlayerController>, IHolder
 {
     #region Variables
 
@@ -34,6 +34,41 @@ public class PlayerController : SingletonBase<PlayerController>
 
     #endregion
 
+    #region Interface Methods
+
+    public bool IsHoldingItem()
+    {
+        return m_HasItem;
+    }
+
+    public void AddItem(IHoldable item)
+    {
+        if (m_Item != null)
+            m_Item = item;
+    }
+
+    public IHoldable GetItem()
+    {
+        return m_Item;
+    }
+
+    // TODO: What happens when the item is dropped
+    public void RemoveItem()
+    {
+        m_Item = null;
+    }
+
+    // Not Sure if this will work
+    public bool IsHoldingItem(IHoldable item)
+    {
+        if (GetItem() == item)
+            return true;
+        else
+            return false;
+    }
+
+    #region
+
     #region Class Methods
 
     public bool IsAlive()
@@ -61,27 +96,11 @@ public class PlayerController : SingletonBase<PlayerController>
         m_state = s;
     }
 
-    public void PickUpItem(IHoldable i)
-    {
-        if(m_Item != null)
-            m_Item = i;
-    }
-
-    public IHoldable GetItem()
-    {
-        return m_Item;
-    }
-
-    // TODO: What happens when the item is dropped
-    public void DropItem()
-    {
-        m_Item = null;
-    }
-
     #endregion
 
     protected override void Awake()
     {
         base.Awake();
     }
+
 }
