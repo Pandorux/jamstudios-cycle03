@@ -45,4 +45,8 @@ public class PoweredLight : LightBase, IPowered<int>
     {
         base.Start();
     }
+
+    void Update()
+    {
+    }
 }

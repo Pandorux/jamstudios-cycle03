@@ -8,6 +8,11 @@ public class Frigid : MonoBehaviour, IState<EnemyState> {
     [SerializeField]
     private EnemyState m_state;
 
+    public bool CanStateChange()
+    {
+        throw new NotImplementedException();
+    }
+
     public void ChangeState()
     {
         throw new NotImplementedException();

@@ -9,9 +9,8 @@ public interface IInteractable {
     /// </summary>
     /// <returns></returns>
     bool IsInteractable();
-
+    void SetInteractability(bool b);
     void Interact();
-
     void TriggerOnStay(Collider c);
 
 }
