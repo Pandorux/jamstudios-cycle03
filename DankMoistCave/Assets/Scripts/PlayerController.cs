@@ -3,14 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : SingletonBase<PlayerController>
 {
     #region Variables
-
-    /// <summary>
-    /// Singleton
-    /// </summary>
-    public static PlayerController instance = null;
 
     private bool m_isAlive = true;
 
@@ -84,4 +79,9 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+
+    protected override void Awake()
+    {
+        base.Awake();
+    }
 }
