@@ -60,11 +60,6 @@ public abstract class LightBase : MonoBehaviour, ILight {
         m_lightOn = !m_lightOn;
     }
 
-    public virtual void SetState(bool s)
-    {
-        m_lightOn = s;
-    }
-
     public virtual bool GetState()
     {
         return m_lightOn;
@@ -76,5 +71,11 @@ public abstract class LightBase : MonoBehaviour, ILight {
     {
         m_light.intensity = m_intensity;
         m_light.gameObject.SetActive(m_lightOn);
+    }
+
+    // TODO:
+    public bool CanStateChange()
+    {
+        throw new NotImplementedException();
     }
 }

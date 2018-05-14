@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour, ILight, IDeath {
+    public bool CanStateChange()
+    {
+        throw new NotImplementedException();
+    }
+
     public void ChangeState()
     {
         throw new NotImplementedException();

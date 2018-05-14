@@ -5,7 +5,7 @@ using UnityEngine;
 public interface IState<T> {
     
     void ChangeState();
-    void SetState(T s);
+    bool CanStateChange();
     T GetState();
 
 }

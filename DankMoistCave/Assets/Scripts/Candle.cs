@@ -124,7 +124,7 @@ public class Candle : LightBase, IInteractable, IDeath
         if(GetTimeLeft() <= 0 && IsAlive())
         {
             SetAlive(false);
-            SetState(false);
+            ChangeState();
             SetInteractability(false);
             Fade(m_FadeDuration);
         }
