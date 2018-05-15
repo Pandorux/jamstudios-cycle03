@@ -67,7 +67,7 @@ public class PlayerController : SingletonBase<PlayerController>, IHolder
             return false;
     }
 
-    #region
+    #endregion
 
     #region Class Methods
 

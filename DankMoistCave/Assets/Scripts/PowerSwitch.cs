@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PowerSwitch : Switch, IInteractable
 {
+    public Sprite m_OnSprite;
+    public Sprite m_OffSprite;
+
     [SerializeField]
     private float m_InteractionDistance;
 
@@ -12,15 +15,21 @@ public class PowerSwitch : Switch, IInteractable
 
     public void Interact()
     {
-        if(m_IsOn)
+        SpriteRenderer s = GetComponent<SpriteRenderer>();
+
+        if (m_IsOn)
         {
             m_IsOn = false;
-            InvokeOn();
+            Debug.Log("Off");
+            s.sprite = m_OnSprite;
+            InvokeOff();
         }
         else
         {
             m_IsOn = true;
-            InvokeOff();
+            Debug.Log("On");
+            s.sprite = m_OffSprite;
+            InvokeOn();
         }
     }
 
@@ -29,6 +38,7 @@ public class PowerSwitch : Switch, IInteractable
         return gameObject.active;
     }
 
+    // TODO:
     public void SetInteractability(bool b)
     {
         throw new NotImplementedException();
@@ -36,12 +46,14 @@ public class PowerSwitch : Switch, IInteractable
 
     #endregion
 
-    void IInteractable.TriggerOnStay(Collider c)
+    void OnTriggerStay2D(Collider2D c)
     {
-        if(c.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Player")
         {
-            // TODO: Check for Button Press
-            // Interact();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+            }
         }
     }
 

@@ -39,15 +39,6 @@ public class Candle : LightBase, IInteractable, IDeath, IHoldable
         return gameObject.active;
     }
 
-    public void TriggerOnStay(Collider c)
-    {
-        if(c.gameObject.tag == "Player")
-        {
-            // TODO: Check if player presses button
-            // Interact()
-        }
-    }
-
     public void SetInteractability(bool b)
     {
         foreach(Collider c in GetComponents<Collider>())
@@ -93,10 +84,10 @@ public class Candle : LightBase, IInteractable, IDeath, IHoldable
 
     public bool CanBePickedUp()
     {
-        if(!GetState())
-        {
+        if (!GetState())
             return true;
-        }
+        else
+            return false;
     }
 
     public bool IsBeingHold()
@@ -167,5 +158,14 @@ public class Candle : LightBase, IInteractable, IDeath, IHoldable
         }
     }
 
-
+    void OnTriggerStay2D(Collider2D c)
+    {
+        if (c.gameObject.tag == "Player")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+            }
+        }
+    }
 }
