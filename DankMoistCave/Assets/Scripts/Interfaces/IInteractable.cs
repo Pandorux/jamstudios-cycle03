@@ -11,6 +11,5 @@ public interface IInteractable {
     bool IsInteractable();
     void SetInteractability(bool b);
     void Interact();
-    void TriggerOnStay(Collider c);
 
 }

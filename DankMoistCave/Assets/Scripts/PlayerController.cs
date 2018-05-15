@@ -3,65 +3,104 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, ILight, IDeath
+public class PlayerController : SingletonBase<PlayerController>, IHolder
 {
-    public bool CanStateChange()
+    #region Variables
+
+    private bool m_isAlive = true;
+
+    [Tooltip("Does the player have its Zippo Lighter out")]
+    [SerializeField]
+    private bool m_LightOn = true;
+
+    [Tooltip("Does the player have their Zippo Lighter")]
+    [SerializeField]
+    private bool m_HasLight = true;
+
+    [Tooltip("The body temperature of the player")]
+    [SerializeField]
+    [Range(-20, 65)] // TODO: Look up proper body temps
+    private int m_BodyTemperature = 20;
+
+    [Tooltip("Is player holding an item besides the Zippo Lighter?")]
+    [SerializeField]
+    private bool m_HasItem = false;
+
+    [Tooltip("The Item the player is holding.")]
+    [SerializeField]
+    private IHoldable m_Item = null;
+
+    private PlayerState m_state = PlayerState.Idle;
+
+    #endregion
+
+    #region Interface Methods
+
+    public bool IsHoldingItem()
     {
-        throw new NotImplementedException();
+        return m_HasItem;
     }
 
-    public void ChangeState()
+    public void AddItem(IHoldable item)
     {
-        throw new NotImplementedException();
+        if (m_Item != null)
+            m_Item = item;
     }
 
-    public void DestroyThis()
+    public IHoldable GetItem()
     {
-        throw new NotImplementedException();
+        return m_Item;
     }
 
-    public void Fade(float dur)
+    // TODO: What happens when the item is dropped
+    public void RemoveItem()
     {
-        throw new NotImplementedException();
+        m_Item = null;
     }
 
-    public int GetLightIntensity()
+    // Not Sure if this will work
+    public bool IsHoldingItem(IHoldable item)
     {
-        throw new NotImplementedException();
+        if (GetItem() == item)
+            return true;
+        else
+            return false;
     }
 
-    public LightType GetLightType()
-    {
-        throw new NotImplementedException();
-    }
+    #endregion
 
-    public bool GetState()
-    {
-        throw new NotImplementedException();
-    }
-
-    public int GetWarmth()
-    {
-        throw new NotImplementedException();
-    }
+    #region Class Methods
 
     public bool IsAlive()
     {
-        throw new NotImplementedException();
+        return m_isAlive;
     }
 
-    public void SetAlive(bool a)
+    public bool HasZippo()
     {
-        throw new NotImplementedException();
+        return m_HasLight;
     }
 
-    public void SetLightIntensity(int str)
+    public void LoseZippo()
     {
-        throw new NotImplementedException();
+        m_HasLight = false;
     }
 
-    public void SetWarmth(int w)
+    public int GetBodyTemp()
     {
-        throw new NotImplementedException();
+        return m_BodyTemperature;
     }
+
+    public void ChangeState(PlayerState s)
+    {
+        m_state = s;
+    }
+
+    #endregion
+
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
 }
