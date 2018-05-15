@@ -170,10 +170,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_1
@@ -184,10 +188,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_2
@@ -198,10 +206,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5.9224205, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 11.176109, y: -6.8238983}
+        - {x: 2.098526, y: 1.2327576}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_3
@@ -212,10 +226,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 7.098526, y: 11.176102}
+        - {x: -2.1500854, y: 1.054184}
+        - {x: -10.352219, y: -7.9224243}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_4
@@ -226,10 +246,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_5
@@ -240,10 +264,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_6
@@ -254,10 +282,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_7
@@ -268,10 +300,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_8
@@ -282,10 +318,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -4.05571, y: -8.155167}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_9
@@ -296,10 +337,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: 4}
+        - {x: 12, y: 4}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_10
@@ -310,10 +355,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: 4}
+        - {x: 12, y: 4}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_11
@@ -324,10 +373,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -12}
+        - {x: -4, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_12
@@ -338,10 +391,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -12}
+        - {x: -4, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_13
@@ -352,10 +409,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: 12}
+        - {x: 4, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_14
@@ -366,10 +427,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: 12}
+        - {x: 4, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_15
@@ -380,10 +445,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_16
@@ -394,10 +463,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -7}
+        - {x: -1.020935, y: -0.24630737}
+        - {x: -8, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_17
@@ -408,10 +483,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_18
@@ -422,10 +501,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_19
@@ -436,10 +519,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_20
@@ -450,10 +537,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_21
@@ -464,10 +555,20 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: 7}
+        - {x: -7.8238983, y: 3.8448334}
+        - {x: -4.0775757, y: -1.1761017}
+        - {x: -1.2536926, y: -4.7253723}
+        - {x: 2.9433594, y: -5.901474}
+        - {x: 5.8657684, y: -8.922409}
+        - {x: 7, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_22
@@ -478,10 +579,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 12, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -2.415039, y: -3.4864502}
+        - {x: 6.2536774, y: 2.0209503}
+        - {x: 12, y: 7}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_23
@@ -492,10 +599,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -4}
+        - {x: -12, y: -4}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_24
@@ -506,10 +617,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -4}
+        - {x: -12, y: -4}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_25
@@ -520,10 +635,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 12}
+        - {x: 0.68966675, y: 0.5702057}
+        - {x: -12, y: -9}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_26
@@ -534,10 +655,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_27
@@ -548,10 +673,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_28
@@ -562,10 +691,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_29
@@ -576,10 +709,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_30
@@ -590,10 +727,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 11.176102, y: 4.2327423}
+        - {x: -4.1761093, y: 9.253693}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_31
@@ -604,10 +746,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 5}
+        - {x: -12, y: 5}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -1}
+        - {x: 1, y: 3}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_32
@@ -618,10 +766,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: -2}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -9}
+        - {x: -1.176117, y: -6.6687317}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_33
@@ -632,10 +785,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7.0775757, y: -9.922409}
+        - {x: -12, y: -10}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -2}
+        - {x: 4, y: -4.7463226}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_34
@@ -646,10 +805,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 1.8448486, y: 1.9790497}
+        - {x: -12, y: -2.922409}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_35
@@ -660,10 +824,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+        - {x: 0.07757568, y: 7.0566406}
+        - {x: -12, y: 4.5073853}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_36
@@ -674,10 +843,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_37
@@ -688,10 +861,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_38
@@ -702,10 +879,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 8.922417, y: 11.176102}
+        - {x: 0.77514267, y: -0.5220947}
+        - {x: -12, y: -10.746307}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_39
@@ -716,10 +899,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_40
@@ -730,10 +917,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: 12}
+        - {x: -5, y: -6}
+        - {x: -5, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_41
@@ -744,10 +936,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_42
@@ -758,10 +954,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 10, y: -12}
+        - {x: 12, y: 5}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_43
@@ -772,10 +973,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_44
@@ -786,10 +991,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_45
@@ -800,10 +1009,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: 0}
+        - {x: -11, y: -10}
+        - {x: -8, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_46
@@ -814,10 +1029,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_47
@@ -828,10 +1047,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 5, y: -12}
+        - {x: 5, y: 2}
+        - {x: -1, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_48
@@ -842,10 +1066,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_49
@@ -856,10 +1084,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: -9}
+        - {x: -8, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_50
@@ -870,10 +1103,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_51
@@ -884,10 +1121,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_52
@@ -898,10 +1139,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: 12}
+        - {x: -12, y: -5}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_53
@@ -912,10 +1158,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 9, y: 12}
+        - {x: 2, y: -2}
+        - {x: 2, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_54
@@ -926,10 +1177,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -1, y: -12}
+        - {x: 3, y: -1}
+        - {x: 5, y: 10}
+        - {x: 5, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_55
@@ -940,10 +1197,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_56
@@ -954,10 +1215,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_57
@@ -968,10 +1233,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5, y: 12}
+        - {x: -5, y: -2}
+        - {x: 1, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_58
@@ -982,10 +1252,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -2, y: -12}
+        - {x: -2, y: -4}
+        - {x: -8, y: 9}
+        - {x: -10, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_59
@@ -996,10 +1272,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 12, y: -12}
+        - {x: 12, y: -2}
+        - {x: 10, y: 12}
+        - {x: -12, y: 12}
+        - {x: -12, y: -12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_60
@@ -1010,10 +1291,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_61
@@ -1024,10 +1309,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_62
@@ -1038,7 +1327,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1052,7 +1341,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1066,7 +1355,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1080,10 +1369,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_66
@@ -1094,10 +1387,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -9, y: -12}
+        - {x: -2, y: 3}
+        - {x: -2, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_67
@@ -1108,10 +1406,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_68
@@ -1122,10 +1424,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_69
@@ -1136,10 +1442,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 2, y: 12}
+        - {x: 2, y: 4}
+        - {x: 8, y: -9}
+        - {x: 10, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_70
@@ -1150,10 +1462,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_71
@@ -1164,7 +1480,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1178,7 +1494,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1192,7 +1508,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1206,10 +1522,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_75
@@ -1220,10 +1540,15 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: -7, y: -12}
+        - {x: 12, y: 8}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_76
@@ -1234,10 +1559,16 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: 9}
+        - {x: 3, y: -7}
+        - {x: 9, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_77
@@ -1248,10 +1579,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_78
@@ -1262,7 +1597,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1276,7 +1611,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1290,10 +1625,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_81
@@ -1304,10 +1643,14 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       tessellationDetail: 0
     outline: []
     physicsShape: []
