@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour, IPowered<int>, IState<bool> {
+public class Door : MonoBehaviour, /*IPowered<int>,*/ IState<bool> {
 
     [Tooltip("Amount of power being channeled into this device.")]
     [SerializeField]
@@ -17,27 +17,27 @@ public class Door : MonoBehaviour, IPowered<int>, IState<bool> {
 
     #region Interface Methods
 
-    public void AddPower(int p)
-    {
-        m_voltage += p;
-        m_voltage = m_voltage > m_maxVoltage ? m_maxVoltage : m_voltage;
-    }
+    //public void AddPower(int p)
+    //{
+    //    m_voltage += p;
+    //    m_voltage = m_voltage > m_maxVoltage ? m_maxVoltage : m_voltage;
+    //}
 
-    public int GetCurrentVoltage()
-    {
-        return m_voltage;
-    }
+    //public int GetCurrentVoltage()
+    //{
+    //    return m_voltage;
+    //}
 
-    public int GetMaxVoltage()
-    {
-        return m_maxVoltage;
-    }
+    //public int GetMaxVoltage()
+    //{
+    //    return m_maxVoltage;
+    //}
 
-    public void RemovePower(int p)
-    {
-        m_voltage -= p;
-        m_voltage = m_voltage <= 0 ? 0 : m_voltage;
-    }
+    //public void RemovePower(int p)
+    //{
+    //    m_voltage -= p;
+    //    m_voltage = m_voltage <= 0 ? 0 : m_voltage;
+    //}
 
     /// <summary>
     /// Changes door state if possiblw
@@ -59,38 +59,40 @@ public class Door : MonoBehaviour, IPowered<int>, IState<bool> {
 
     public bool CanStateChange()
     {
-        if(GetState())
-        {
-            return true;
-        }
-        else
-        {
-            if(m_voltage == m_maxVoltage)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //if(GetState())
+        //{
+        return true;
+    //    }
+    //    else
+    //    {
+    //        if(m_voltage == m_maxVoltage)
+    //        {
+    //            return true;
+    //        }
+    //        else
+    //        {
+    //            return false;
+    //        }
+    //    }
     }
 
     public void Open()
     {
         // Play Animation
-        // Move Collision?
+        GetComponent<BoxCollider2D>().enabled = false;
+        m_IsDoorOpen = true;
     }
 
     public void Close()
     {
         // Play Animation
-        // Move Collision?
+        GetComponent<BoxCollider2D>().enabled = true;
+        m_IsDoorOpen = false;
     }
 
     void Start()
     {
-        if(GetState())
+        if (GetState())
         {
             Open();
         }

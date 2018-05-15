@@ -158,6 +158,7 @@ public class Candle : LightBase, IInteractable, IDeath, IHoldable
         }
     }
 
+    // TODO: Trigger should check for key input
     void OnTriggerStay2D(Collider2D c)
     {
         if (c.gameObject.tag == "Player")

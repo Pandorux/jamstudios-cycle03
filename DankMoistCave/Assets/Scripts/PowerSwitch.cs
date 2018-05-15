@@ -20,14 +20,12 @@ public class PowerSwitch : Switch, IInteractable
         if (m_IsOn)
         {
             m_IsOn = false;
-            Debug.Log("Off");
             s.sprite = m_OnSprite;
             InvokeOff();
         }
         else
         {
             m_IsOn = true;
-            Debug.Log("On");
             s.sprite = m_OffSprite;
             InvokeOn();
         }
