@@ -734,7 +734,7 @@ TextureImporter:
       - - {x: -12, y: 12}
         - {x: -12, y: -12}
         - {x: 12, y: -12}
-        - {x: 11.176102, y: 4.2327423}
+        - {x: 12, y: 4.2327423}
         - {x: -4.1761093, y: 9.253693}
       tessellationDetail: 0
     - serializedVersion: 2
