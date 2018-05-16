@@ -15,18 +15,31 @@ public class PressurePlate : Switch {
         return m_IsOn;
     }
 
+    public void Switch()
+    {
+        if(m_IsOn)
+        {
+            InvokeOff();
+            m_IsOn = false;
+        }
+        else
+        {
+            InvokeOn();
+            m_IsOn = true;
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D c)
     {
-        InvokeOn();
+        
         GetComponent<SpriteRenderer>().sprite = m_DownSprite;
-        m_IsOn = true;
+        Switch();
     }
 
     void OnTriggerExit2D(Collider2D c)
     {
-        InvokeOff();
         GetComponent<SpriteRenderer>().sprite = m_UpSprite;
-        m_IsOn = false;
+        Switch();
     }
 
 }
