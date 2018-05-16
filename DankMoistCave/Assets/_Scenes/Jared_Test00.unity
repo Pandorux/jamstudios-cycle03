@@ -284,15 +284,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 997322156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca0ffb6ada0342e43a323cd4fbc3f8cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fcb88696d3427149b65e233e61d4aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_light: {fileID: 335614996}
   m_intensity: 10
   m_warmth: 0
-  m_lightOn: 0
-  voltage: 0
-  maxVoltage: 1
+  m_lightOn: 1
 --- !u!212 &997322158
 SpriteRenderer:
   m_ObjectHideFlags: 0

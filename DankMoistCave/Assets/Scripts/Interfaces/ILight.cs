@@ -9,5 +9,7 @@ public interface ILight : IState<bool> {
     int GetLightIntensity();
     void SetWarmth(int w);
     int GetWarmth();
+    void TurnOn();
+    void TurnOff();
     
 }

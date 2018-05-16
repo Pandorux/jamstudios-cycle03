@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class LightBase : MonoBehaviour, ILight {
+public class SwitchLight : MonoBehaviour, ILight {
 
     #region Variables
 
@@ -65,17 +65,38 @@ public abstract class LightBase : MonoBehaviour, ILight {
         return m_lightOn;
     }
 
+    public void TurnOn()
+    {
+        m_light.gameObject.SetActive(true);
+        ChangeState();
+    }
+
+    public void TurnOff()
+    {
+        m_light.gameObject.SetActive(false);
+        ChangeState();
+    }
+
+    public bool CanStateChange()
+    {
+        return true;
+    }
+
     #endregion
 
     protected virtual void Start()
     {
         m_light.intensity = m_intensity;
         m_light.gameObject.SetActive(m_lightOn);
+
+        if (GetState())
+        {
+            TurnOn();
+        }
+        else
+        {
+            TurnOff();
+        }
     }
 
-    // TODO:
-    public bool CanStateChange()
-    {
-        throw new NotImplementedException();
-    }
 }

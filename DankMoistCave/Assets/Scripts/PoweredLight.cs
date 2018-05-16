@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoweredLight : LightBase, IPowered<int>
+public class PoweredLight : SwitchLight, IPowered<int>
 {
     #region Variables
 
