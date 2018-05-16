@@ -8,6 +8,9 @@ public class Door : MonoBehaviour, IState<bool> {
     [SerializeField]
     private bool m_IsDoorOpen;
 
+    public Sprite m_OpenSprite;
+    public Sprite m_CloseSprite;
+
     #region Interface Methods
 
     /// <summary>
@@ -37,6 +40,7 @@ public class Door : MonoBehaviour, IState<bool> {
     {
         // Play Animation
         GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().sprite = m_OpenSprite;
         m_IsDoorOpen = true;
     }
 
@@ -44,6 +48,7 @@ public class Door : MonoBehaviour, IState<bool> {
     {
         // Play Animation
         GetComponent<BoxCollider2D>().enabled = true;
+        GetComponent<SpriteRenderer>().sprite = m_CloseSprite;
         m_IsDoorOpen = false;
     }
 

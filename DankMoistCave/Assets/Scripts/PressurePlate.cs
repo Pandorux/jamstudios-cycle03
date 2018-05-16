@@ -7,21 +7,39 @@ using UnityEngine.Events;
 [RequireComponent(typeof(BoxCollider2D))]
 public class PressurePlate : Switch {
 
+    public Sprite m_DownSprite;
+    public Sprite m_UpSprite;
+
     public bool IsPressed()
     {
         return m_IsOn;
     }
 
-    void OnTriggerEnter()
+    public void Switch()
     {
-        InvokeOff();
-        m_IsOn = true;
+        if(m_IsOn)
+        {
+            InvokeOff();
+            m_IsOn = false;
+        }
+        else
+        {
+            InvokeOn();
+            m_IsOn = true;
+        }
     }
 
-    void OnTriggerExit()
+    void OnTriggerEnter2D(Collider2D c)
     {
-        InvokeOn();
-        m_IsOn = false;
+        
+        GetComponent<SpriteRenderer>().sprite = m_DownSprite;
+        Switch();
+    }
+
+    void OnTriggerExit2D(Collider2D c)
+    {
+        GetComponent<SpriteRenderer>().sprite = m_UpSprite;
+        Switch();
     }
 
 }

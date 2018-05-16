@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoweredLight : LightBase, IPowered<int>
+public class PoweredLight : SwitchLight, IPowered<int>
 {
     #region Variables
 
@@ -11,7 +11,7 @@ public class PoweredLight : LightBase, IPowered<int>
     protected int voltage = 0;
 
     [SerializeField]
-    protected int maxVoltage = 100;
+    protected int maxVoltage = 1;
 
     #endregion
 
@@ -39,15 +39,70 @@ public class PoweredLight : LightBase, IPowered<int>
         voltage = voltage < 0 ? 0 : voltage;
     }
 
+    /// <summary>
+    /// Switches the Light on and off if possible
+    /// </summary>
+    public virtual void ChangeState()
+    {
+        if(CanStateChange())
+        {
+            m_lightOn = !m_lightOn;
+        }
+    }
+
+    new public bool CanStateChange()
+    {
+        if(GetState())
+        {
+            Debug.Log("Can Change");
+            return true;
+        }
+        else
+        {
+            if(GetCurrentVoltage() == GetMaxVoltage())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
+    new public void TurnOn()
+    {
+        if(CanStateChange())
+        {
+            base.TurnOn();
+        }
+    }
+
+    new public void TurnOff()
+    {
+        if (CanStateChange())
+        {
+            base.TurnOff();
+        }
+    }
+
     #endregion
+
 
     protected override void Start()
     {
-        base.Start();
-    }
+        m_light.intensity = m_intensity;
+        m_light.gameObject.SetActive(m_lightOn);
 
-    void Update()
-    {
-
+        if (GetState())
+        {
+            TurnOn();
+            voltage = maxVoltage;
+        }
+        else
+        {
+            TurnOff();
+            m_lightOn = false;
+        }
     }
 }
