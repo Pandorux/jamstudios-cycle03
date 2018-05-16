@@ -11,7 +11,7 @@ public class PoweredLight : LightBase, IPowered<int>
     protected int voltage = 0;
 
     [SerializeField]
-    protected int maxVoltage = 100;
+    protected int maxVoltage = 1;
 
     #endregion
 
@@ -39,15 +39,72 @@ public class PoweredLight : LightBase, IPowered<int>
         voltage = voltage < 0 ? 0 : voltage;
     }
 
+    /// <summary>
+    /// Switches the Light on and off if possible
+    /// </summary>
+    public virtual void ChangeState()
+    {
+        if(CanStateChange())
+        {
+            m_lightOn = !m_lightOn;
+        }
+    }
+
+    public virtual bool GetState()
+    {
+        return m_lightOn;
+    }
+
+    public bool CanStateChange()
+    {
+        if(GetState())
+        {
+            return true;
+        }
+        else
+        {
+            if(voltage == maxVoltage)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
     #endregion
+
+    public void TurnOn()
+    {
+        if(CanStateChange())
+        {
+            m_light.gameObject.SetActive(true);
+            ChangeState();
+        }
+    }
+
+    public void TurnOff()
+    {
+        if (CanStateChange())
+        {
+            m_light.gameObject.SetActive(false);
+            ChangeState();
+        }
+    }
 
     protected override void Start()
     {
         base.Start();
-    }
 
-    void Update()
-    {
-
+        if(GetState())
+        {
+            TurnOn();
+        }
+        else
+        {
+            TurnOff();
+        }
     }
 }
