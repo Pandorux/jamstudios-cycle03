@@ -50,20 +50,16 @@ public class PoweredLight : SwitchLight, IPowered<int>
         }
     }
 
-    public virtual bool GetState()
-    {
-        return m_lightOn;
-    }
-
-    public bool CanStateChange()
+    new public bool CanStateChange()
     {
         if(GetState())
         {
+            Debug.Log("Can Change");
             return true;
         }
         else
         {
-            if(voltage == maxVoltage)
+            if(GetCurrentVoltage() == GetMaxVoltage())
             {
                 return true;
             }
@@ -74,37 +70,39 @@ public class PoweredLight : SwitchLight, IPowered<int>
         }
     }
 
-    #endregion
-
-    public void TurnOn()
+    new public void TurnOn()
     {
         if(CanStateChange())
         {
-            m_light.gameObject.SetActive(true);
-            ChangeState();
+            base.TurnOn();
         }
     }
 
-    public void TurnOff()
+    new public void TurnOff()
     {
         if (CanStateChange())
         {
-            m_light.gameObject.SetActive(false);
-            ChangeState();
+            base.TurnOff();
         }
     }
 
+    #endregion
+
+
     protected override void Start()
     {
-        base.Start();
+        m_light.intensity = m_intensity;
+        m_light.gameObject.SetActive(m_lightOn);
 
-        if(GetState())
+        if (GetState())
         {
             TurnOn();
+            voltage = maxVoltage;
         }
         else
         {
             TurnOff();
+            m_lightOn = false;
         }
     }
 }
