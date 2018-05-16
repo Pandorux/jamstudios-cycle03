@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets._2D;
 
-public class PlayerController : SingletonBase<PlayerController>, IHolder
+public class PlayerController : PlatformerCharacter2D, IHolder
 {
     #region Variables
 
@@ -19,8 +20,25 @@ public class PlayerController : SingletonBase<PlayerController>, IHolder
 
     [Tooltip("The body temperature of the player")]
     [SerializeField]
-    [Range(-20, 65)] // TODO: Look up proper body temps
-    private int m_BodyTemperature = 20;
+    [Range(0, 100)] // TODO: Look up proper body temps
+    private float m_BodyTemperature = 50;
+
+    [Tooltip("The player's max body temperature")]
+    [SerializeField]
+    private float m_MaxTemperature = 100;
+
+    [Tooltip("How quickly the player will lose body heat")]
+    public float m_HeatLostRate = 1;
+
+    [Tooltip("What is the normal movement speed of the player")]
+    [SerializeField]
+    [Range(0, 20)]
+    private float m_MaxSpeed = 5;
+
+    [Tooltip("What is the normal jump force of the player")]
+    [SerializeField]
+    [Range(0, 2000)]
+    private float m_MaxJumpForce = 400;
 
     [Tooltip("Is player holding an item besides the Zippo Lighter?")]
     [SerializeField]
@@ -30,7 +48,8 @@ public class PlayerController : SingletonBase<PlayerController>, IHolder
     [SerializeField]
     private IHoldable m_Item = null;
 
-    private PlayerState m_state = PlayerState.Idle;
+    // TODO: Figure if needed
+    // private PlayerState m_state = PlayerState.Idle;
 
     #endregion
 
@@ -86,21 +105,44 @@ public class PlayerController : SingletonBase<PlayerController>, IHolder
         m_HasLight = false;
     }
 
-    public int GetBodyTemp()
+    public float GetBodyTemp()
     {
         return m_BodyTemperature;
     }
 
-    public void ChangeState(PlayerState s)
+    //public void ChangeState(PlayerState s)
+    //{
+    //    m_state = s;
+    //}
+
+    public void RaiseBodyTemp(int degrees = 1)
     {
-        m_state = s;
+        m_BodyTemperature += degrees;
+    }
+
+    public void LowerBodyTemp()
+    {
+        m_BodyTemperature -= m_HeatLostRate;
+    }
+
+    public void SlowMovement()
+    {
+        // TODO: Add Dynamic Theshold
+        if(GetBodyTemp() < m_MaxTemperature / 2)
+        {
+            m_Speed = m_MaxSpeed * (GetBodyTemp() / (m_MaxTemperature / 2));
+            m_JumpForce = m_MaxJumpForce * (GetBodyTemp() / (m_MaxJumpForce / 2));
+        }
     }
 
     #endregion
 
-    protected override void Awake()
+    protected void FixUpdate()
     {
-        base.Awake();
+        if(!m_LightOn)
+        {
+            LowerBodyTemp();
+        }
     }
 
 }
