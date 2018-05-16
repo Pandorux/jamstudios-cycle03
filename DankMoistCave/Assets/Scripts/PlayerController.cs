@@ -52,7 +52,7 @@ public class PlayerController : PlatformerCharacter2D
     }
 
     [System.Serializable]
-    private class BodyTemperature
+    private class BodyTemperature : ITemperate<float>
     {
         [Tooltip("The body temperature of the player")]
         [SerializeField]
@@ -71,23 +71,28 @@ public class PlayerController : PlatformerCharacter2D
         [Range(0, 100)]
         private float m_SlowThreshold = 50;
 
-        public float GetBodyTemp()
+        #region Interface Methods
+
+        public float GetTemp()
         {
             return m_BodyTemperature;
         }
 
-        public void RaiseBodyTemp(int degrees = 1)
+        public void RaiseTemp(float degrees = 1)
         {
             m_BodyTemperature += degrees;
         }
 
-        public void LowerBodyTemp()
+        public void LowerTemp(float degrees = 1)
         {
-            m_BodyTemperature -= m_HeatLostRate;
+            m_BodyTemperature -= degrees;
         }
+
+        #endregion
+
     }
 
-    #endregion
+#endregion
 
     #region Variables
 
