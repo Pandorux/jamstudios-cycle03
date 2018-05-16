@@ -6,6 +6,46 @@ using UnityStandardAssets._2D;
 
 public class PlayerController : PlatformerCharacter2D, IHolder
 {
+    #region Subclasses
+
+    [System.Serializable]
+    private class BodyTemperature
+    {
+        [Tooltip("The body temperature of the player")]
+        [SerializeField]
+        [Range(0, 100)] // TODO: Look up proper body temps
+        private float m_BodyTemperature = 50;
+
+        [Tooltip("The player's max body temperature")]
+        [SerializeField]
+        private float m_MaxTemperature = 100;
+
+        [Tooltip("How quickly the player will lose body heat")]
+        public float m_HeatLostRate = 1;
+
+        [Tooltip("Player movement will slow under this temperature")]
+        [SerializeField]
+        [Range(0, 100)]
+        private float m_SlowThreshold = 50;
+
+        public float GetBodyTemp()
+        {
+            return m_BodyTemperature;
+        }
+
+        public void RaiseBodyTemp(int degrees = 1)
+        {
+            m_BodyTemperature += degrees;
+        }
+
+        public void LowerBodyTemp()
+        {
+            m_BodyTemperature -= m_HeatLostRate;
+        }
+    }
+
+    #endregion
+
     #region Variables
 
     private bool m_isAlive = true;
@@ -17,18 +57,6 @@ public class PlayerController : PlatformerCharacter2D, IHolder
     [Tooltip("Does the player have their Zippo Lighter")]
     [SerializeField]
     private bool m_HasLight = true;
-
-    [Tooltip("The body temperature of the player")]
-    [SerializeField]
-    [Range(0, 100)] // TODO: Look up proper body temps
-    private float m_BodyTemperature = 50;
-
-    [Tooltip("The player's max body temperature")]
-    [SerializeField]
-    private float m_MaxTemperature = 100;
-
-    [Tooltip("How quickly the player will lose body heat")]
-    public float m_HeatLostRate = 1;
 
     [Tooltip("What is the normal movement speed of the player")]
     [SerializeField]
@@ -47,6 +75,9 @@ public class PlayerController : PlatformerCharacter2D, IHolder
     [Tooltip("The Item the player is holding.")]
     [SerializeField]
     private IHoldable m_Item = null;
+
+    [SerializeField]
+    private BodyTemperature m_BodyTemperature;
 
     // TODO: Figure if needed
     // private PlayerState m_state = PlayerState.Idle;
@@ -105,44 +136,29 @@ public class PlayerController : PlatformerCharacter2D, IHolder
         m_HasLight = false;
     }
 
-    public float GetBodyTemp()
-    {
-        return m_BodyTemperature;
-    }
-
     //public void ChangeState(PlayerState s)
     //{
     //    m_state = s;
     //}
 
-    public void RaiseBodyTemp(int degrees = 1)
-    {
-        m_BodyTemperature += degrees;
-    }
-
-    public void LowerBodyTemp()
-    {
-        m_BodyTemperature -= m_HeatLostRate;
-    }
-
-    public void SlowMovement()
-    {
-        // TODO: Add Dynamic Theshold
-        if(GetBodyTemp() < m_MaxTemperature / 2)
-        {
-            m_Speed = m_MaxSpeed * (GetBodyTemp() / (m_MaxTemperature / 2));
-            m_JumpForce = m_MaxJumpForce * (GetBodyTemp() / (m_MaxJumpForce / 2));
-        }
-    }
+    //public void SlowMovement()
+    //{
+    //    // TODO: Add Dynamic Theshold
+    //    if(GetBodyTemp() < m_MaxTemperature / m_SlowThreshold)
+    //    {
+    //        m_Speed = m_MaxSpeed * (GetBodyTemp() / (m_MaxTemperature / m_SlowThreshold));
+    //        m_JumpForce = m_MaxJumpForce * (GetBodyTemp() / (m_MaxJumpForce / m_SlowThreshold));
+    //    }
+    //}
 
     #endregion
 
     protected void FixUpdate()
     {
-        if(!m_LightOn)
-        {
-            LowerBodyTemp();
-        }
+        //if(!m_LightOn)
+        //{
+        //    LowerBodyTemp();
+        //}
     }
 
 }

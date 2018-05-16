@@ -614,6 +614,33 @@ MonoBehaviour:
   Interaction: 
   Pause: 
   Restart: 
+--- !u!114 &1722718514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722718512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5532ec22eb7d24884dd7d47e7d278e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Speed: 10
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LightOn: 1
+  m_HasLight: 1
+  m_BodyTemperature: 50
+  m_MaxTemperature: 100
+  m_HeatLostRate: 1
+  m_MaxSpeed: 5
+  m_MaxJumpForce: 400
+  m_SlowThreshold: 50
+  m_HasItem: 0
 --- !u!1001 &1825166907
 Prefab:
   m_ObjectHideFlags: 0
