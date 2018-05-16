@@ -4,9 +4,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets._2D;
 
-public class PlayerController : PlatformerCharacter2D, IHolder
+public class PlayerController : PlatformerCharacter2D
 {
     #region Subclasses
+
+    [System.Serializable]
+    private class Inventory : IHolder
+    {
+        [Tooltip("Is player holding an item besides the Zippo Lighter?")]
+        [SerializeField]
+        private bool m_HasItem = false;
+
+        [Tooltip("The Item the player is holding.")]
+        [SerializeField]
+        private IHoldable m_Item = null;
+
+        public bool IsHoldingItem()
+        {
+            return m_HasItem;
+        }
+
+        public void AddItem(IHoldable item)
+        {
+            if (m_Item != null)
+                m_Item = item;
+        }
+
+        public IHoldable GetItem()
+        {
+            return m_Item;
+        }
+
+        // TODO: What happens when the item is dropped
+        public void RemoveItem()
+        {
+            m_Item = null;
+        }
+
+        // Not Sure if this will work
+        public bool IsHoldingItem(IHoldable item)
+        {
+            if (GetItem() == item)
+                return true;
+            else
+                return false;
+        }
+    }
 
     [System.Serializable]
     private class BodyTemperature
@@ -68,13 +111,8 @@ public class PlayerController : PlatformerCharacter2D, IHolder
     [Range(0, 2000)]
     private float m_MaxJumpForce = 400;
 
-    [Tooltip("Is player holding an item besides the Zippo Lighter?")]
     [SerializeField]
-    private bool m_HasItem = false;
-
-    [Tooltip("The Item the player is holding.")]
-    [SerializeField]
-    private IHoldable m_Item = null;
+    private Inventory m_inventory;
 
     [SerializeField]
     private BodyTemperature m_BodyTemperature;
@@ -86,36 +124,7 @@ public class PlayerController : PlatformerCharacter2D, IHolder
 
     #region Interface Methods
 
-    public bool IsHoldingItem()
-    {
-        return m_HasItem;
-    }
 
-    public void AddItem(IHoldable item)
-    {
-        if (m_Item != null)
-            m_Item = item;
-    }
-
-    public IHoldable GetItem()
-    {
-        return m_Item;
-    }
-
-    // TODO: What happens when the item is dropped
-    public void RemoveItem()
-    {
-        m_Item = null;
-    }
-
-    // Not Sure if this will work
-    public bool IsHoldingItem(IHoldable item)
-    {
-        if (GetItem() == item)
-            return true;
-        else
-            return false;
-    }
 
     #endregion
 
