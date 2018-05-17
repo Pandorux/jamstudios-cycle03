@@ -6,64 +6,18 @@ using UnityStandardAssets._2D;
 
 public class PlayerController : PlatformerCharacter2D
 {
-    #region Subclasses
-
-    [System.Serializable]
-    private class Inventory : IHolder
-    {
-        [Tooltip("Is player holding an item besides the Zippo Lighter?")]
-        [SerializeField]
-        private bool m_HasItem = false;
-
-        [Tooltip("The Item the player is holding.")]
-        [SerializeField]
-        private IHoldable m_Item = null;
-
-        public bool IsHoldingItem()
-        {
-            return m_HasItem;
-        }
-
-        public void AddItem(IHoldable item)
-        {
-            if (m_Item != null)
-                m_Item = item;
-        }
-
-        public IHoldable GetItem()
-        {
-            return m_Item;
-        }
-
-        // TODO: What happens when the item is dropped
-        public void RemoveItem()
-        {
-            m_Item = null;
-        }
-
-        // Not Sure if this will work
-        public bool IsHoldingItem(IHoldable item)
-        {
-            if (GetItem() == item)
-                return true;
-            else
-                return false;
-        }
-    }
-
-    #endregion
-
     #region Variables
 
     private bool m_isAlive = true;
 
-    [Tooltip("Does the player have its Zippo Lighter out")]
-    [SerializeField]
-    private bool m_LightOn = true;
+    //[Tooltip("Does the player have its Zippo Lighter out")]
+    //[SerializeField]
+    //private bool m_LightOn = true;
 
-    [Tooltip("Does the player have their Zippo Lighter")]
-    [SerializeField]
-    private bool m_HasLight = true;
+    //[Tooltip("Does the player have their Zippo Lighter")]
+    //[SerializeField]
+    //private bool m_HasLight = true;
+
 
     [Tooltip("What is the normal movement speed of the player")]
     [SerializeField]
@@ -76,13 +30,10 @@ public class PlayerController : PlatformerCharacter2D
     private float m_MaxJumpForce = 400;
 
     [SerializeField]
-    private Inventory m_inventory;
-
-    [SerializeField]
     private BodyTemperature m_BodyTemperature;
 
-    // TODO: Figure if needed
-    // private PlayerState m_state = PlayerState.Idle;
+    [SerializeField]
+    private Inventory m_inventory;
 
     #endregion
 
@@ -93,15 +44,15 @@ public class PlayerController : PlatformerCharacter2D
         return m_isAlive;
     }
 
-    public bool HasZippo()
-    {
-        return m_HasLight;
-    }
+    //public bool HasZippo()
+    //{
+    //    return m_HasLight;
+    //}
 
-    public void LoseZippo()
-    {
-        m_HasLight = false;
-    }
+    //public void LoseZippo()
+    //{
+    //    m_HasLight = false;
+    //}
 
     //public void ChangeState(PlayerState s)
     //{

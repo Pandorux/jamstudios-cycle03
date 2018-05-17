@@ -7,6 +7,8 @@ public class Candle : SwitchLight, IInteractable, IDeath, IHoldable
 {
     #region Variables
 
+    private string m_Name = "Candle";
+
     [Tooltip("How long a candle will burn for")]
     [Range(0, 120)]
     [SerializeField]
@@ -95,16 +97,23 @@ public class Candle : SwitchLight, IInteractable, IDeath, IHoldable
         return m_BeingHold;
     }
 
-    public void PickUp(ref IHolder holder)
+    // TODO:
+    public void PickUp(ref Inventory holder)
     {
-        holder.AddItem(this);
+        //holder.AddItem(this);
         m_BeingHold = true;
     }
 
-    public void PutDown(ref IHolder holder)
+    // TODO:
+    public void PutDown(ref Inventory holder)
     {
-        holder.RemoveItem();
+        //holder.RemoveItem();
         m_BeingHold = false;
+    }
+
+    public string GetName()
+    {
+        return m_Name;
     }
 
     #endregion

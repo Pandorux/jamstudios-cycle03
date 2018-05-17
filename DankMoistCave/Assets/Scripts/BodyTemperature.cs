@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-private class BodyTemperature : MonoBehaviour, ITemperate<float>
+class BodyTemperature : ITemperate<float>
 {
     [Tooltip("The normal body temperature of the player")]
     [SerializeField]
