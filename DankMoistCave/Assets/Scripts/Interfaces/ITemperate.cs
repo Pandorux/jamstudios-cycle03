@@ -4,7 +4,8 @@ using UnityEngine;
 
 public interface ITemperate<T> {
 
-    T GetTemp();
+    T GetCurrentTemp();
+    T GetNormalTemp();
     void RaiseTemp(T degrees);
     void LowerTemp(T degrees);
 

@@ -51,48 +51,7 @@ public class PlayerController : PlatformerCharacter2D
         }
     }
 
-    [System.Serializable]
-    private class BodyTemperature : ITemperate<float>
-    {
-        [Tooltip("The body temperature of the player")]
-        [SerializeField]
-        [Range(0, 100)] // TODO: Look up proper body temps
-        private float m_BodyTemperature = 50;
-
-        [Tooltip("The player's max body temperature")]
-        [SerializeField]
-        private float m_MaxTemperature = 100;
-
-        [Tooltip("How quickly the player will lose body heat")]
-        public float m_HeatLostRate = 1;
-
-        [Tooltip("Player movement will slow under this temperature")]
-        [SerializeField]
-        [Range(0, 100)]
-        private float m_SlowThreshold = 50;
-
-        #region Interface Methods
-
-        public float GetTemp()
-        {
-            return m_BodyTemperature;
-        }
-
-        public void RaiseTemp(float degrees = 1)
-        {
-            m_BodyTemperature += degrees;
-        }
-
-        public void LowerTemp(float degrees = 1)
-        {
-            m_BodyTemperature -= degrees;
-        }
-
-        #endregion
-
-    }
-
-#endregion
+    #endregion
 
     #region Variables
 
@@ -124,12 +83,6 @@ public class PlayerController : PlatformerCharacter2D
 
     // TODO: Figure if needed
     // private PlayerState m_state = PlayerState.Idle;
-
-    #endregion
-
-    #region Interface Methods
-
-
 
     #endregion
 
@@ -166,13 +119,5 @@ public class PlayerController : PlatformerCharacter2D
     //}
 
     #endregion
-
-    protected void FixUpdate()
-    {
-        //if(!m_LightOn)
-        //{
-        //    LowerBodyTemp();
-        //}
-    }
 
 }
