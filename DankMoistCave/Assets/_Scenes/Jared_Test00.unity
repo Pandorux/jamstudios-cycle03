@@ -283,7 +283,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 348615228}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_type: 0
   m_light: {fileID: 348615230}
   m_intensity: 3
-  m_warmth: 0
+  m_warmth: 0.5
   m_lightOn: 0
 --- !u!1 &997322156
 GameObject:

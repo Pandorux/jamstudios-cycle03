@@ -17,11 +17,11 @@ public class SwitchLight : MonoBehaviour, ILight {
     protected Light m_light;
 
     [SerializeField]
-    protected int m_intensity;
+    protected float m_intensity;
 
     [Tooltip("The amount of heat the light emits")]
     [SerializeField]
-    protected int m_warmth;
+    protected float m_warmth;
 
     [SerializeField]
     protected bool m_lightOn;
@@ -30,7 +30,7 @@ public class SwitchLight : MonoBehaviour, ILight {
 
     #region Interface Methods
 
-    public int GetLightIntensity()
+    public float GetLightIntensity()
     {
         return m_intensity;
     }
@@ -40,17 +40,17 @@ public class SwitchLight : MonoBehaviour, ILight {
         return m_type;
     }
 
-    public virtual int GetWarmth()
+    public virtual float GetWarmth()
     {
         return m_warmth;
     }
 
-    public virtual void SetLightIntensity(int str)
+    public virtual void SetLightIntensity(float str)
     {
         m_intensity = str;
     }
 
-    public virtual void SetWarmth(int w)
+    public virtual void SetWarmth(float w)
     {
         m_warmth = w;
     }
@@ -105,4 +105,17 @@ public class SwitchLight : MonoBehaviour, ILight {
         }
     }
 
+    void OnTriggerStay2D(Collider2D c)
+    {
+        if(c.gameObject.tag == "Player")
+        {
+            if(GetLightType() == LightType.Warm)
+            {
+                c.gameObject
+                    .GetComponent<PlayerController>()
+                    .m_BodyTemperature
+                    .RaiseTemp(m_warmth);
+            }
+        }
+    }
 }

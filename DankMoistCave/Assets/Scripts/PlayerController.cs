@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour {
     private bool m_HasLight = true;
 
     [SerializeField]
-    private BodyTemperature m_BodyTemperature;
+    public BodyTemperature m_BodyTemperature;
 
     [SerializeField]
-    private Inventory m_inventory;
+    public Inventory m_inventory;
 
     #endregion
 

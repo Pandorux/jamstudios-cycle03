@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-class BodyTemperature : ITemperate<float>
+public class BodyTemperature : ITemperate<float>
 {
     [Tooltip("The normal body temperature")]
     [SerializeField]
@@ -43,6 +43,8 @@ class BodyTemperature : ITemperate<float>
     public void RaiseTemp(float degrees = 1)
     {
         m_CurrentTemperature += degrees;
+        m_CurrentTemperature = m_MaxTemperature < m_CurrentTemperature ?
+            m_MaxTemperature : m_CurrentTemperature;
     }
 
     public void LowerTemp(float degrees = 1)
