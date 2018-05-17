@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private SwitchLight m_ZippoLighter;
 
+    [Tooltip("The Transform componet of the Zippo Lighter")]
+    [SerializeField]
+    private Transform m_ZippoTransform;
+
+    [Tooltip("Where the Zippo Lighter will be placed on the character")]
+    [SerializeField]
+    private Transform m_ZippoSocket;
+
     [Tooltip("Does the player have their Zippo Lighter")]
     [SerializeField]
     private bool m_HasLight = true;
@@ -74,6 +82,9 @@ public class PlayerController : MonoBehaviour {
     void Update()
     {
         SlowMovement();
+
+        // TODO: Need better solution for Zippo Collision
+        m_ZippoTransform.position = m_ZippoSocket.position;
 
         if (m_BodyTemperature.GetCurrentTemp() < m_BodyTemperature.GetFatalTemp()) 
         {
