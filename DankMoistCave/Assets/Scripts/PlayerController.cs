@@ -4,19 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets._2D;
 
+[DisallowMultipleComponent]
 [RequireComponent(typeof(Platformer2DUserControl))]
 public class PlayerController : MonoBehaviour {
+
     #region Variables
 
     private bool m_isAlive = true;
 
-    //[Tooltip("Does the player have its Zippo Lighter out")]
-    //[SerializeField]
-    //private bool m_LightOn = true;
+    [Tooltip("The player character's best friend")]
+    [SerializeField]
+    private SwitchLight m_ZippoLighter;
 
-    //[Tooltip("Does the player have their Zippo Lighter")]
-    //[SerializeField]
-    //private bool m_HasLight = true;
+    [Tooltip("Does the player have their Zippo Lighter")]
+    [SerializeField]
+    private bool m_HasLight = true;
 
     [SerializeField]
     private BodyTemperature m_BodyTemperature;
@@ -31,15 +33,15 @@ public class PlayerController : MonoBehaviour {
         return m_isAlive;
     }
 
-    //public bool HasZippo()
-    //{
-    //    return m_HasLight;
-    //}
+    public bool HasZippo()
+    {
+        return m_HasLight;
+    }
 
-    //public void LoseZippo()
-    //{
-    //    m_HasLight = false;
-    //}
+    public void LoseZippo()
+    {
+        m_HasLight = false;
+    }
 
     //public void ChangeState(PlayerState s)
     //{
@@ -76,6 +78,14 @@ public class PlayerController : MonoBehaviour {
         if (m_BodyTemperature.GetCurrentTemp() < m_BodyTemperature.GetFatalTemp()) 
         {
             Death();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            if(m_HasLight)
+            {
+                m_ZippoLighter.ChangeState();
+            }
         }
     }
 

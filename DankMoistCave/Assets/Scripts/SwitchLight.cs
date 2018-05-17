@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class SwitchLight : MonoBehaviour, ILight {
 
     #region Variables
 
-    protected const LightType m_type = LightType.Cold;
+    [Tooltip("The type of light being used")]
+    [SerializeField]
+    protected LightType m_type = LightType.Cold;
 
     [Tooltip("The light that'll emit illumination")]
     [SerializeField]
@@ -57,7 +60,10 @@ public class SwitchLight : MonoBehaviour, ILight {
     /// </summary>
     public virtual void ChangeState()
     {
-        m_lightOn = !m_lightOn;
+        if (m_lightOn)
+            TurnOff();
+        else
+            TurnOn();
     }
 
     public virtual bool GetState()
@@ -68,13 +74,13 @@ public class SwitchLight : MonoBehaviour, ILight {
     public void TurnOn()
     {
         m_light.gameObject.SetActive(true);
-        ChangeState();
+        m_lightOn = true;
     }
 
     public void TurnOff()
     {
         m_light.gameObject.SetActive(false);
-        ChangeState();
+        m_lightOn = false;
     }
 
     public bool CanStateChange()
