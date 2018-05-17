@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Candle : SwitchLight, IInteractable, IDeath, IHoldable
+[RequireComponent(typeof(Item))]
+public class Candle : SwitchLight, IInteractable, IDeath
 {
     #region Variables
-
-    private string m_Name = "Candle";
 
     [Tooltip("How long a candle will burn for")]
     [Range(0, 120)]
@@ -21,10 +20,6 @@ public class Candle : SwitchLight, IInteractable, IDeath, IHoldable
 
     private float m_burnTimeLeft;
     private bool m_IsAlive = true;
-
-    [Tooltip("Is this item being hold by something?")]
-    [SerializeField]
-    private bool m_BeingHold = false;
 
     #endregion
 
@@ -82,38 +77,6 @@ public class Candle : SwitchLight, IInteractable, IDeath, IHoldable
         {
             DestroyThis();
         }
-    }
-
-    public bool CanBePickedUp()
-    {
-        if (!GetState())
-            return true;
-        else
-            return false;
-    }
-
-    public bool IsBeingHold()
-    {
-        return m_BeingHold;
-    }
-
-    // TODO:
-    public void PickUp(ref Inventory holder)
-    {
-        //holder.AddItem(this);
-        m_BeingHold = true;
-    }
-
-    // TODO:
-    public void PutDown(ref Inventory holder)
-    {
-        //holder.RemoveItem();
-        m_BeingHold = false;
-    }
-
-    public string GetName()
-    {
-        return m_Name;
     }
 
     #endregion
