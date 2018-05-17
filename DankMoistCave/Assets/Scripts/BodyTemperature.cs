@@ -5,22 +5,22 @@ using UnityEngine;
 [System.Serializable]
 class BodyTemperature : ITemperate<float>
 {
-    [Tooltip("The normal body temperature of the player")]
+    [Tooltip("The normal body temperature")]
     [SerializeField]
     private float m_NormalTemperature = 37;
 
-    [Tooltip("The body temperature of the player")]
+    [Tooltip("The current body temperature")]
     [SerializeField]
     private float m_CurrentTemperature = 37;
 
-    [Tooltip("The player's max body temperature")]
+    [Tooltip("The max body temperature")]
     [SerializeField]
     private float m_MaxTemperature = 40;
 
-    [Tooltip("How quickly the player will lose body heat")]
+    [Tooltip("How quickly body heat will be lost")]
     public float m_HeatLostRate = 1;
 
-    [Tooltip("Player movement will slow under this temperature")]
+    [Tooltip("Movement will slow under this temperature")]
     [SerializeField]
     private float m_FreezingTemperature = 35;
 
