@@ -24,6 +24,15 @@ class BodyTemperature : ITemperate<float>
     [SerializeField]
     private float m_FreezingTemperature = 35;
 
+    [Tooltip("Death will be induced at this temperature")]
+    [SerializeField]
+    private float m_FatalLowTemperature = 28;
+
+    [Tooltip("The slowest speed you'll move when you're freezing cold")]
+    [SerializeField]
+    [Range(0, 1)]
+    private float m_MaxSpeedLost = 0.7f;
+
     #region Interface Methods
 
     public float GetCurrentTemp()
@@ -51,6 +60,16 @@ class BodyTemperature : ITemperate<float>
     public float GetFreezingTemp()
     {
         return m_FreezingTemperature;
+    }
+
+    public float GetFatalTemp()
+    {
+        return m_FatalLowTemperature;
+    }
+
+    public float GetMaxSpeedLost()
+    {
+        return m_MaxSpeedLost;
     }
 
 }

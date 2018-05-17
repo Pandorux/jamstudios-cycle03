@@ -48,20 +48,35 @@ public class PlayerController : MonoBehaviour {
 
     public void SlowMovement()
     {
-        PlatformerCharacter2D pc = gameObject.GetComponent<PlatformerCharacter2D>();
+        PlatformerCharacter2D pc = GetComponent<PlatformerCharacter2D>();
 
-        // TODO: 
+        // TODO: Make more readable
         if (m_BodyTemperature.GetCurrentTemp() < m_BodyTemperature.GetFreezingTemp())
         {
-            float multi = m_BodyTemperature.GetCurrentTemp() / m_BodyTemperature.GetFreezingTemp();
-            pc.m_Speed = pc.m_MaxSpeed * multi;
-            pc.m_JumpForce = pc.m_MaxJumpForce * multi;
+            float diff = m_BodyTemperature.GetFreezingTemp() - m_BodyTemperature.GetFatalTemp(); // Norm Diff
+            float curDiff = m_BodyTemperature.GetFreezingTemp() - m_BodyTemperature.GetCurrentTemp(); // Cur Diff
+            float percentile = (curDiff / diff);
+            float lost = m_BodyTemperature.GetMaxSpeedLost() * percentile;
+
+            pc.m_Speed = pc.m_MaxSpeed * (1 - lost);
+            pc.m_JumpForce = pc.m_MaxJumpForce * (1 - lost);
         }
+    }
+
+    public void Death()
+    {
+        m_isAlive = false;
+        Destroy(gameObject);
     }
 
     void Update()
     {
         SlowMovement();
+
+        if (m_BodyTemperature.GetCurrentTemp() < m_BodyTemperature.GetFatalTemp()) 
+        {
+            Death();
+        }
     }
 
 }
