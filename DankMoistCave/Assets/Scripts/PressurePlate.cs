@@ -31,15 +31,20 @@ public class PressurePlate : Switch {
 
     void OnTriggerEnter2D(Collider2D c)
     {
-        
-        GetComponent<SpriteRenderer>().sprite = m_DownSprite;
-        Switch();
+        if(!c.isTrigger)
+        {
+            GetComponent<SpriteRenderer>().sprite = m_DownSprite;
+            Switch();
+        }
     }
 
     void OnTriggerExit2D(Collider2D c)
     {
-        GetComponent<SpriteRenderer>().sprite = m_UpSprite;
-        Switch();
+        if(!c.isTrigger)
+        {
+            GetComponent<SpriteRenderer>().sprite = m_UpSprite;
+            Switch();
+        }
     }
 
 }
