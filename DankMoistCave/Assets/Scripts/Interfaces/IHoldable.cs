@@ -4,9 +4,10 @@ using UnityEngine;
 
 public interface IHoldable {
 
+    string GetName();
     bool CanBePickedUp();
     bool IsBeingHold();
-    void PickUp(ref IHolder holder);
-    void PutDown(ref IHolder holder);
+    void PickUp(ref Inventory holder);
+    void PutDown(ref Inventory holder);
 
 }

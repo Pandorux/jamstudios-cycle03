@@ -2,105 +2,81 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets._2D;
 
-public class PlayerController : SingletonBase<PlayerController>, IHolder
-{
+[RequireComponent(typeof(Platformer2DUserControl))]
+public class PlayerController : MonoBehaviour {
     #region Variables
 
     private bool m_isAlive = true;
 
-    [Tooltip("Does the player have its Zippo Lighter out")]
-    [SerializeField]
-    private bool m_LightOn = true;
+    //[Tooltip("Does the player have its Zippo Lighter out")]
+    //[SerializeField]
+    //private bool m_LightOn = true;
 
-    [Tooltip("Does the player have their Zippo Lighter")]
-    [SerializeField]
-    private bool m_HasLight = true;
+    //[Tooltip("Does the player have their Zippo Lighter")]
+    //[SerializeField]
+    //private bool m_HasLight = true;
 
-    [Tooltip("The body temperature of the player")]
     [SerializeField]
-    [Range(-20, 65)] // TODO: Look up proper body temps
-    private int m_BodyTemperature = 20;
+    private BodyTemperature m_BodyTemperature;
 
-    [Tooltip("Is player holding an item besides the Zippo Lighter?")]
     [SerializeField]
-    private bool m_HasItem = false;
-
-    [Tooltip("The Item the player is holding.")]
-    [SerializeField]
-    private IHoldable m_Item = null;
-
-    private PlayerState m_state = PlayerState.Idle;
+    private Inventory m_inventory;
 
     #endregion
-
-    #region Interface Methods
-
-    public bool IsHoldingItem()
-    {
-        return m_HasItem;
-    }
-
-    public void AddItem(IHoldable item)
-    {
-        if (m_Item != null)
-            m_Item = item;
-    }
-
-    public IHoldable GetItem()
-    {
-        return m_Item;
-    }
-
-    // TODO: What happens when the item is dropped
-    public void RemoveItem()
-    {
-        m_Item = null;
-    }
-
-    // Not Sure if this will work
-    public bool IsHoldingItem(IHoldable item)
-    {
-        if (GetItem() == item)
-            return true;
-        else
-            return false;
-    }
-
-    #endregion
-
-    #region Class Methods
 
     public bool IsAlive()
     {
         return m_isAlive;
     }
 
-    public bool HasZippo()
+    //public bool HasZippo()
+    //{
+    //    return m_HasLight;
+    //}
+
+    //public void LoseZippo()
+    //{
+    //    m_HasLight = false;
+    //}
+
+    //public void ChangeState(PlayerState s)
+    //{
+    //    m_state = s;
+    //}
+
+    public void SlowMovement()
     {
-        return m_HasLight;
+        PlatformerCharacter2D pc = GetComponent<PlatformerCharacter2D>();
+
+        // TODO: Make more readable
+        if (m_BodyTemperature.GetCurrentTemp() < m_BodyTemperature.GetFreezingTemp())
+        {
+            float diff = m_BodyTemperature.GetFreezingTemp() - m_BodyTemperature.GetFatalTemp(); // Norm Diff
+            float curDiff = m_BodyTemperature.GetFreezingTemp() - m_BodyTemperature.GetCurrentTemp(); // Cur Diff
+            float percentile = (curDiff / diff);
+            float lost = m_BodyTemperature.GetMaxSpeedLost() * percentile;
+
+            pc.m_Speed = pc.m_MaxSpeed * (1 - lost);
+            pc.m_JumpForce = pc.m_MaxJumpForce * (1 - lost);
+        }
     }
 
-    public void LoseZippo()
+    public void Death()
     {
-        m_HasLight = false;
+        m_isAlive = false;
+        Destroy(gameObject);
     }
 
-    public int GetBodyTemp()
+    void Update()
     {
-        return m_BodyTemperature;
-    }
+        SlowMovement();
 
-    public void ChangeState(PlayerState s)
-    {
-        m_state = s;
-    }
-
-    #endregion
-
-    protected override void Awake()
-    {
-        base.Awake();
+        if (m_BodyTemperature.GetCurrentTemp() < m_BodyTemperature.GetFatalTemp()) 
+        {
+            Death();
+        }
     }
 
 }

@@ -54,7 +54,6 @@ public class PoweredLight : SwitchLight, IPowered<int>
     {
         if(GetState())
         {
-            Debug.Log("Can Change");
             return true;
         }
         else
