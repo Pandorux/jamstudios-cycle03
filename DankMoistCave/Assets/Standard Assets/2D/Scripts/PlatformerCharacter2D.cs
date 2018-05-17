@@ -5,10 +5,11 @@ namespace UnityStandardAssets._2D
 {
     public class PlatformerCharacter2D : MonoBehaviour
     {   
-        [SerializeField] protected float m_Speed = 10f;                    // The fastest the player can travel in the x axis.
-        [SerializeField] protected float m_MaxSpeed = 5;
-        [SerializeField] protected float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
-        [SerializeField] protected float m_MaxJumpForce = 400;
+        // TODO: These should not be public
+        [SerializeField] public float m_Speed = 10f;                    // The fastest the player can travel in the x axis.
+        [SerializeField] public float m_MaxSpeed = 5;
+        [SerializeField] public float m_JumpForce = 800;                  // Amount of force added when the player jumps.
+        [SerializeField] public float m_MaxJumpForce = 800;
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
@@ -111,6 +112,12 @@ namespace UnityStandardAssets._2D
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+        }
+
+        void Start()
+        {
+            m_Speed = m_MaxSpeed < m_Speed ? m_MaxSpeed : m_Speed;
+            m_MaxJumpForce = m_MaxJumpForce < m_JumpForce ? m_MaxJumpForce : m_JumpForce;
         }
     }
 }

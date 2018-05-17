@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets._2D;
 
-public class PlayerController : PlatformerCharacter2D
-{
+[RequireComponent(typeof(Platformer2DUserControl))]
+public class PlayerController : MonoBehaviour {
     #region Variables
 
     private bool m_isAlive = true;
@@ -48,13 +48,20 @@ public class PlayerController : PlatformerCharacter2D
 
     public void SlowMovement()
     {
-        // TODO: Add Dynamic Theshold
+        PlatformerCharacter2D pc = gameObject.GetComponent<PlatformerCharacter2D>();
+
+        // TODO: 
         if (m_BodyTemperature.GetCurrentTemp() < m_BodyTemperature.GetFreezingTemp())
         {
             float multi = m_BodyTemperature.GetCurrentTemp() / m_BodyTemperature.GetFreezingTemp();
-            m_Speed = m_MaxSpeed * multi;
-            m_JumpForce = m_MaxJumpForce * multi;
+            pc.m_Speed = pc.m_MaxSpeed * multi;
+            pc.m_JumpForce = pc.m_MaxJumpForce * multi;
         }
+    }
+
+    void Update()
+    {
+        SlowMovement();
     }
 
 }
