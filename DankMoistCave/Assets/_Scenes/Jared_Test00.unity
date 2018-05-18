@@ -352,11 +352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fcb88696d3427149b65e233e61d4aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_type: 0
-  m_light: {fileID: 348615230}
-  m_intensity: 3
-  m_warmth: 0.5
-  m_lightOn: 0
+  m_Type: 0
+  m_Light: {fileID: 348615230}
+  m_Intensity: 3
+  m_Warmth: 0.5
+  m_LightOn: 0
 --- !u!1 &652610512
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,11 +413,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0ffb6ada0342e43a323cd4fbc3f8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_type: 1
-  m_light: {fileID: 335614996}
-  m_intensity: 10
-  m_warmth: 0
-  m_lightOn: 0
+  m_Type: 1
+  m_Light: {fileID: 335614996}
+  m_Intensity: 5
+  m_Warmth: 0
+  m_LightOn: 0
   voltage: 0
   maxVoltage: 1
 --- !u!212 &997322158
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_HasLight: 1
   m_BodyTemperature:
     m_NormalTemperature: 37
-    m_CurrentTemperature: 37
+    m_CurrentTemperature: 28
     m_MaxTemperature: 40
     m_HeatLostRate: 1
     m_FreezingTemperature: 35
