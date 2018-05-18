@@ -5,10 +5,10 @@ using UnityEngine;
 public interface ILight : IState<bool> {
 
     LightType GetLightType();
-    void SetLightIntensity(int str);
-    int GetLightIntensity();
-    void SetWarmth(int w);
-    int GetWarmth();
+    void SetLightIntensity(float str);
+    float GetLightIntensity();
+    void SetWarmth(float w);
+    float GetWarmth();
     void TurnOn();
     void TurnOff();
     

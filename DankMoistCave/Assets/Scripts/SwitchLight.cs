@@ -3,53 +3,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class SwitchLight : MonoBehaviour, ILight {
 
     #region Variables
 
-    protected const LightType m_type = LightType.Cold;
+    [Tooltip("The type of light being used")]
+    [SerializeField]
+    protected LightType m_Type = LightType.Cold;
 
     [Tooltip("The light that'll emit illumination")]
     [SerializeField]
-    protected Light m_light;
+    protected Light m_Light;
 
     [SerializeField]
-    protected int m_intensity;
+    protected float m_Intensity;
 
     [Tooltip("The amount of heat the light emits")]
     [SerializeField]
-    protected int m_warmth;
+    protected float m_Warmth;
 
     [SerializeField]
-    protected bool m_lightOn;
+    protected bool m_LightOn;
 
     #endregion
 
     #region Interface Methods
 
-    public int GetLightIntensity()
+    public float GetLightIntensity()
     {
-        return m_intensity;
+        return m_Intensity;
     }
 
     public LightType GetLightType()
     {
-        return m_type;
+        return m_Type;
     }
 
-    public virtual int GetWarmth()
+    public virtual float GetWarmth()
     {
-        return m_warmth;
+        return m_Warmth;
     }
 
-    public virtual void SetLightIntensity(int str)
+    public virtual void SetLightIntensity(float str)
     {
-        m_intensity = str;
+        m_Intensity = str;
     }
 
-    public virtual void SetWarmth(int w)
+    public virtual void SetWarmth(float w)
     {
-        m_warmth = w;
+        m_Warmth = w;
     }
 
     /// <summary>
@@ -57,24 +60,27 @@ public class SwitchLight : MonoBehaviour, ILight {
     /// </summary>
     public virtual void ChangeState()
     {
-        m_lightOn = !m_lightOn;
+        if (m_LightOn)
+            TurnOff();
+        else
+            TurnOn();
     }
 
     public virtual bool GetState()
     {
-        return m_lightOn;
+        return m_LightOn;
     }
 
     public void TurnOn()
     {
-        m_light.gameObject.SetActive(true);
-        ChangeState();
+        m_Light.gameObject.SetActive(true);
+        m_LightOn = true;
     }
 
     public void TurnOff()
     {
-        m_light.gameObject.SetActive(false);
-        ChangeState();
+        m_Light.gameObject.SetActive(false);
+        m_LightOn = false;
     }
 
     public bool CanStateChange()
@@ -86,8 +92,8 @@ public class SwitchLight : MonoBehaviour, ILight {
 
     protected virtual void Start()
     {
-        m_light.intensity = m_intensity;
-        m_light.gameObject.SetActive(m_lightOn);
+        m_Light.intensity = m_Intensity;
+        m_Light.gameObject.SetActive(m_LightOn);
 
         if (GetState())
         {
@@ -99,4 +105,17 @@ public class SwitchLight : MonoBehaviour, ILight {
         }
     }
 
+    void OnTriggerStay2D(Collider2D c)
+    {
+        if(c.gameObject.tag == "Player")
+        {
+            if(GetLightType() == LightType.Warm)
+            {
+                c.gameObject
+                    .GetComponent<PlayerController>()
+                    .m_BodyTemperature
+                    .RaiseTemp(m_Warmth * Time.deltaTime);
+            }
+        }
+    }
 }

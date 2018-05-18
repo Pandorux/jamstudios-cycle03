@@ -9,7 +9,7 @@ public class Inventory {
     [SerializeField]
     private int m_Capacity = 50;
 
-    [Tooltip("")]
+    [Tooltip("The items in the players inventory")]
     [SerializeField]
     private List<Item> m_Items;
 
@@ -31,11 +31,4 @@ public class Inventory {
             }
         }
     }
-
-    // TODO:
-    //public IHoldable GetItemByType<T>(IHoldable item)
-    //{
-    //    return null;
-    //}
-
 }

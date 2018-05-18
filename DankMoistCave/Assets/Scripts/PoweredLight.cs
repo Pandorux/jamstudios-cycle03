@@ -46,7 +46,7 @@ public class PoweredLight : SwitchLight, IPowered<int>
     {
         if(CanStateChange())
         {
-            m_lightOn = !m_lightOn;
+            m_LightOn = !m_LightOn;
         }
     }
 
@@ -90,8 +90,8 @@ public class PoweredLight : SwitchLight, IPowered<int>
 
     protected override void Start()
     {
-        m_light.intensity = m_intensity;
-        m_light.gameObject.SetActive(m_lightOn);
+        m_Light.intensity = m_Intensity;
+        m_Light.gameObject.SetActive(m_LightOn);
 
         if (GetState())
         {
@@ -101,7 +101,7 @@ public class PoweredLight : SwitchLight, IPowered<int>
         else
         {
             TurnOff();
-            m_lightOn = false;
+            m_LightOn = false;
         }
     }
 }
