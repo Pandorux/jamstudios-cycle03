@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class SaveableData : MonoBehaviour {
+public static class SaveableData {
 
     #region Data Persistence
 
@@ -10,7 +10,7 @@ public abstract class SaveableData : MonoBehaviour {
     /// 
     /// </summary>
     /// <returns></returns>
-    protected float GetMusicVolume()
+    public static float GetMusicVolume()
     {
         return PlayerPrefs.GetFloat("musicVolume", 1);
     }
@@ -19,7 +19,7 @@ public abstract class SaveableData : MonoBehaviour {
     ///  
     /// </summary>
     /// <param name="isCompleted"></param>
-    protected static void SetMusicVolume(float curVolume)
+    public static void SetMusicVolume(float curVolume)
     {
         PlayerPrefs.SetFloat("musicVolume", curVolume);
     }
@@ -28,7 +28,7 @@ public abstract class SaveableData : MonoBehaviour {
     /// 
     /// </summary>
     /// <returns></returns>
-    protected static float GetSoundVolume()
+    public static float GetSoundVolume()
     {
         return PlayerPrefs.GetFloat("soundVolume", 1);
     }
@@ -37,7 +37,7 @@ public abstract class SaveableData : MonoBehaviour {
     ///  
     /// </summary>
     /// <param name="isCompleted"></param>
-    protected static void SetSoundVolume(float curVolume)
+    public static void SetSoundVolume(float curVolume)
     {
         PlayerPrefs.SetFloat("soundVolume", curVolume);
     }

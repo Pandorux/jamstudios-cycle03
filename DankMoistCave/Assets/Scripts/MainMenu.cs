@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : SaveableData {
+public class MainMenu {
 
     public Slider soundVol;
     public Slider musicVol;
 
     void Start()
     {
-        soundVol.value = GetSoundVolume();
-        musicVol.value = GetMusicVolume();
+        soundVol.value = SaveableData.GetSoundVolume();
+        musicVol.value = SaveableData.GetMusicVolume();
     }
 
     public void PlayGame()
@@ -28,12 +28,12 @@ public class MainMenu : SaveableData {
 
     public void SaveSoundVolume()
     {
-        SetSoundVolume(soundVol.value);
+        SaveableData.SetSoundVolume(soundVol.value);
     }
 
     public void SaveMusicVolume()
     {
-        SetMusicVolume(musicVol.value);
+        SaveableData.SetMusicVolume(musicVol.value);
     }
 
 }

@@ -11,11 +11,11 @@ public class SoundController : SingletonBase<SoundController> {
     {
         base.Awake();
 
-        backgroundSource.volume = GetMusicVolume();
+        backgroundSource.volume = SaveableData.GetMusicVolume();
 
         foreach (AudioSource sound in sounds)
         {
-            sound.volume = GetSoundVolume();
+            sound.volume = SaveableData.GetSoundVolume();
         }
     }
 
@@ -26,7 +26,7 @@ public class SoundController : SingletonBase<SoundController> {
         obj.AddComponent<AudioSource>();
         obj.GetComponent<AudioSource>().clip = sound;
         obj.GetComponent<AudioSource>().loop = loopSound;
-        obj.GetComponent<AudioSource>().volume *= GetSoundVolume();
+        obj.GetComponent<AudioSource>().volume *= SaveableData.GetSoundVolume();
         obj.GetComponent<AudioSource>().Play();
 
         if (!loopSound)
@@ -35,6 +35,6 @@ public class SoundController : SingletonBase<SoundController> {
 
     public float ReturnSoundVolume()
     {
-        return GetSoundVolume();
+        return SaveableData.GetSoundVolume();
     }
 }
