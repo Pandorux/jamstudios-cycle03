@@ -51,6 +51,9 @@ TagManager:
   - name: Beams
     uniqueID: 597914151
     locked: 0
+  - name: Foreground0
+    uniqueID: 3462556173
+    locked: 0
   - name: Foreground
     uniqueID: 4179683121
     locked: 0

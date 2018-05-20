@@ -472,7 +472,7 @@ TextureImporter:
         - {x: 12, y: -12}
         - {x: 12, y: -7}
         - {x: -1.020935, y: -0.24630737}
-        - {x: -8, y: 12}
+        - {x: -8, y: 9.253677}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_17
@@ -639,9 +639,9 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 9, y: 12}
+      - - {x: 8.176117, y: 8.155167}
         - {x: 0.68966675, y: 0.5702057}
-        - {x: -12, y: -9}
+        - {x: -10.077576, y: -9}
         - {x: -12, y: -12}
         - {x: 12, y: -12}
         - {x: 12, y: 12}
@@ -921,8 +921,8 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 0, y: 12}
-        - {x: -5, y: -6}
+      - - {x: 3.5702057, y: 12}
+        - {x: -1.1551666, y: -4.077591}
         - {x: -5, y: -12}
         - {x: 12, y: -12}
         - {x: 12, y: 12}
@@ -960,8 +960,8 @@ TextureImporter:
       physicsShape:
       - - {x: -12, y: 12}
         - {x: -12, y: -12}
-        - {x: 10, y: -12}
-        - {x: 12, y: 5}
+        - {x: 4.23275, y: -12}
+        - {x: 8.979057, y: 4.1761017}
         - {x: 12, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
@@ -1013,10 +1013,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -12, y: 12}
-        - {x: -12, y: 0}
-        - {x: -11, y: -10}
-        - {x: -8, y: -12}
+      - - {x: -11.176102, y: 12}
+        - {x: -6.2327423, y: 0}
+        - {x: -4.4088593, y: -8.077591}
+        - {x: -3.3312683, y: -12}
         - {x: 12, y: -12}
         - {x: 12, y: 12}
       tessellationDetail: 0
@@ -1053,9 +1053,9 @@ TextureImporter:
       physicsShape:
       - - {x: -12, y: 12}
         - {x: -12, y: -12}
-        - {x: 5, y: -12}
-        - {x: 5, y: 2}
-        - {x: -1, y: 12}
+        - {x: 3.901474, y: -12}
+        - {x: 0.3312683, y: 2}
+        - {x: -2.9224243, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
       name: EnvironmentJustTiles_48
@@ -1143,8 +1143,8 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -10, y: 12}
-        - {x: -12, y: -5}
+      - - {x: -4.23275, y: 12}
+        - {x: -8.155167, y: -1.4297943}
         - {x: -12, y: -12}
         - {x: 12, y: -12}
         - {x: 12, y: 12}
@@ -1162,8 +1162,8 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 9, y: 12}
-        - {x: 2, y: -2}
+      - - {x: 10.647789, y: 7.3312683}
+        - {x: 6.6687317, y: -0.901474}
         - {x: 2, y: -12}
         - {x: 12, y: -12}
         - {x: 12, y: 12}
@@ -1183,9 +1183,9 @@ TextureImporter:
       physicsShape:
       - - {x: -12, y: 12}
         - {x: -12, y: -12}
-        - {x: -1, y: -12}
-        - {x: 3, y: -1}
-        - {x: 5, y: 10}
+        - {x: -2.9224167, y: -12}
+        - {x: 0.802948, y: -1.8238983}
+        - {x: 1.429802, y: 6.4297943}
         - {x: 5, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
@@ -1237,9 +1237,9 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -5, y: 12}
-        - {x: -5, y: -2}
-        - {x: 1, y: -12}
+      - - {x: -3.077591, y: 12}
+        - {x: -1.1551666, y: -2}
+        - {x: 2.6477814, y: -12}
         - {x: 12, y: -12}
         - {x: 12, y: 12}
       tessellationDetail: 0
@@ -1258,9 +1258,9 @@ TextureImporter:
       physicsShape:
       - - {x: -12, y: 12}
         - {x: -12, y: -12}
-        - {x: -2, y: -12}
-        - {x: -2, y: -4}
-        - {x: -8, y: 9}
+        - {x: -3.6477814, y: -12}
+        - {x: -5.8448334, y: -5.9224243}
+        - {x: -9.098511, y: 3.5073853}
         - {x: -10, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
@@ -1276,9 +1276,9 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 12, y: -12}
-        - {x: 12, y: -2}
-        - {x: 10, y: 12}
+      - - {x: 10.077591, y: -12}
+        - {x: 7.3312683, y: -1.1761017}
+        - {x: 3.1342316, y: 12}
         - {x: -12, y: 12}
         - {x: -12, y: -12}
       tessellationDetail: 0
@@ -1393,8 +1393,8 @@ TextureImporter:
       physicsShape:
       - - {x: -12, y: 12}
         - {x: -12, y: -12}
-        - {x: -9, y: -12}
-        - {x: -2, y: 3}
+        - {x: -9.274628, y: -6.23275}
+        - {x: -4.746315, y: 3}
         - {x: -2, y: 12}
       tessellationDetail: 0
     - serializedVersion: 2
@@ -1446,9 +1446,9 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 2, y: 12}
-        - {x: 2, y: 4}
-        - {x: 8, y: -9}
+      - - {x: 3.922409, y: 12}
+        - {x: 4.7463074, y: 4}
+        - {x: 8, y: -5.9790573}
         - {x: 10, y: -12}
         - {x: 12, y: -12}
         - {x: 12, y: 12}
