@@ -9,6 +9,7 @@ public class PressurePlate : Switch {
 
     public Sprite m_DownSprite;
     public Sprite m_UpSprite;
+    private int peepsOnPP = 0;
 
     public bool IsPressed()
     {
@@ -33,8 +34,10 @@ public class PressurePlate : Switch {
     {
         if(!c.isTrigger)
         {
+            InvokeOn();
             GetComponent<SpriteRenderer>().sprite = m_DownSprite;
-            Switch();
+            m_IsOn = true;
+            peepsOnPP++;
         }
     }
 
@@ -42,8 +45,14 @@ public class PressurePlate : Switch {
     {
         if(!c.isTrigger)
         {
-            GetComponent<SpriteRenderer>().sprite = m_UpSprite;
-            Switch();
+            peepsOnPP--;
+            if (peepsOnPP == 0)
+            {
+                InvokeOff();
+                m_IsOn = false;
+                GetComponent<SpriteRenderer>().sprite = m_UpSprite;
+            }
+
         }
     }
 
