@@ -21,7 +21,6 @@ public class AnimateLight : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(test.time);
         light.intensity = minInten + (diff * test.Evaluate(test.time));
     }
 }

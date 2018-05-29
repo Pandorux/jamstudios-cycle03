@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     public Inventory m_inventory;
 
+    private Animator puppetMaster;
+
     #endregion
 
     public bool IsAlive()
@@ -79,6 +81,11 @@ public class PlayerController : MonoBehaviour {
         Destroy(gameObject);
     }
 
+    public void Start()
+    {
+        puppetMaster = GetComponent<Animator>();
+    }
+
     void Update()
     {
         SlowMovement();
@@ -100,4 +107,19 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter2D(Collision2D c)
+    {
+        if(c.gameObject.tag == "Pushable")
+        {
+            puppetMaster.SetBool("Pushing", true);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D c)
+    {
+        if (c.gameObject.tag == "Pushable")
+        {
+            puppetMaster.SetBool("Pushing", false);
+        }
+    }
 }
