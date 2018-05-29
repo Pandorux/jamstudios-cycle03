@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour {
         if(c.gameObject.tag == "Pushable")
         {
             puppetMaster.SetBool("Pushing", true);
+            m_ZippoLighter.TurnOff();
         }
     }
 
