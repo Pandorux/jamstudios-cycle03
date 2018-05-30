@@ -19855,6 +19855,11 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50736441174510524, guid: 641c0b7e397b5d748bc921a39bf55ca3,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 429d8286c8b06ef4796cb269583343dd, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 641c0b7e397b5d748bc921a39bf55ca3, type: 2}
   m_IsPrefabParent: 0
@@ -21713,6 +21718,21 @@ Prefab:
     - target: {fileID: 4995936980133586, guid: 665724933b771c444b551dd497039d46, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884768610291184, guid: 665724933b771c444b551dd497039d46,
+        type: 2}
+      propertyPath: MaxInten
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 108417752629975204, guid: 665724933b771c444b551dd497039d46,
+        type: 2}
+      propertyPath: m_Range
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114721680565012490, guid: 665724933b771c444b551dd497039d46,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 665724933b771c444b551dd497039d46, type: 2}
