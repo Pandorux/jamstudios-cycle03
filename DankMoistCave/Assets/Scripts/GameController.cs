@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.PostProcessing;
 
 public class GameController : SingletonBase<GameController> {
 
@@ -15,6 +16,12 @@ public class GameController : SingletonBase<GameController> {
     public bool isGameRunning;
 
     private bool isGamePaused;
+
+    public PlayerController player;
+
+    public float dif;
+    public PostProcessingProfile frozencorpse;
+    
 
     public void PlayerInput()
     {
@@ -38,6 +45,14 @@ public class GameController : SingletonBase<GameController> {
     void Update()
     {
         PlayerInput();
+        VignetteControl();
+    }
+
+    void Start()
+    {
+        
+        dif = player.m_BodyTemperature.GetFreezingTemp() - player.m_BodyTemperature.GetFatalTemp();
+
     }
 
     public void ChangeTimeState(float newGameSpeed)
@@ -63,6 +78,15 @@ public class GameController : SingletonBase<GameController> {
             ChangeTimeState(1.0f);
             Cursor.visible = false;
         }
+    }
+
+	public void VignetteControl(){
+        float curDif;
+        curDif = player.m_BodyTemperature.GetCurrentTemp() - player.m_BodyTemperature.GetFatalTemp();
+        curDif /= dif;
+        curDif = curDif > 1 ? 0 : 1 - curDif;
+        frozencorpse.vignette.settings.intensity = curDif;
+
     }
 
     public void LoadScene(string name)

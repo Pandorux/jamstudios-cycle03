@@ -150,7 +150,7 @@ Rigidbody2D:
   m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 429d8286c8b06ef4796cb269583343dd, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &61405340952426342
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
 --- !u!212 &212012055703314718
 SpriteRenderer:
   m_ObjectHideFlags: 1

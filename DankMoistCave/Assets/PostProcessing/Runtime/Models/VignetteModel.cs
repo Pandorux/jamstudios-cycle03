@@ -12,7 +12,7 @@ namespace UnityEngine.PostProcessing
         }
 
         [Serializable]
-        public struct Settings
+        public class Settings
         {
             [Tooltip("Use the \"Classic\" mode for parametric controls. Use the \"Masked\" mode to use your own texture mask.")]
             public Mode mode;
