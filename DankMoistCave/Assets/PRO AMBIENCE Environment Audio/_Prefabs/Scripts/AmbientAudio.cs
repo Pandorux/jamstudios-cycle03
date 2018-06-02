@@ -4,7 +4,7 @@ using System.Collections;
 public class AmbientAudio : MonoBehaviour {
 
 	[Header("Audio Source References")]
-	public AudioSource loopAudioSource;
+	public AudioSource loopAudioSource = null;
 	public AudioSource soundAudioSource;
 	public AudioSource startEndSource;
 
