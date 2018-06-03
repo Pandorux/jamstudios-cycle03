@@ -46,6 +46,12 @@ TagManager:
   - name: Background
     uniqueID: 2859468135
     locked: 0
+  - name: Wires
+    uniqueID: 1640135581
+    locked: 0
+  - name: Switch
+    uniqueID: 3952724839
+    locked: 0
   - name: Player
     uniqueID: 3541222231
     locked: 0
