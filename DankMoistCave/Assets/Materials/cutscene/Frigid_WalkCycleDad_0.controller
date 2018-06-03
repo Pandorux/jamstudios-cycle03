@@ -5,17 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Walk Cycle_Lighter_0
+  m_Name: Frigid_WalkCycleDad_0
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-<<<<<<< HEAD
-    m_StateMachine: {fileID: 1107557084878351394}
-=======
-    m_StateMachine: {fileID: 1107013659083456996}
->>>>>>> Level-Design
+    m_StateMachine: {fileID: 1107943004557761480}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -25,21 +21,13 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
-<<<<<<< HEAD
---- !u!1102 &1102333561957848270
-=======
---- !u!1102 &1102174262711262140
->>>>>>> Level-Design
+--- !u!1102 &1102141646434988536
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
-  m_Name: text
-=======
-  m_Name: finalcutscene
->>>>>>> Level-Design
+  m_Name: Dadwalk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -52,24 +40,19 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-<<<<<<< HEAD
-  m_Motion: {fileID: 7400000, guid: 765558307934a4a41a8d516feaf3cb14, type: 2}
-=======
-  m_Motion: {fileID: 7400000, guid: 6d067ec927444f746869ff7a77f7045c, type: 2}
->>>>>>> Level-Design
+  m_Motion: {fileID: 7400000, guid: ab2f28cdff2f9304fbfbb29c99001ba8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
-<<<<<<< HEAD
---- !u!1102 &1102402531929028260
+--- !u!1102 &1102835609740112088
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: WalkLighter
+  m_Name: fincutscenedad
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -82,41 +65,13 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 838b43baa3a21824eb28014d2237952e, type: 2}
+  m_Motion: {fileID: 7400000, guid: c08dfab9d1772c74db180beb78c655a2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102427189137750878
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: cutScene
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e2e1498c93815964b93bdf3788678c2f, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1107 &1107557084878351394
-=======
---- !u!1107 &1107013659083456996
->>>>>>> Level-Design
+--- !u!1107 &1107943004557761480
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -125,19 +80,11 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-<<<<<<< HEAD
-    m_State: {fileID: 1102427189137750878}
+    m_State: {fileID: 1102835609740112088}
     m_Position: {x: 200, y: 0, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102402531929028260}
+    m_State: {fileID: 1102141646434988536}
     m_Position: {x: 235, y: 65, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1102333561957848270}
-    m_Position: {x: 270, y: 130, z: 0}
-=======
-    m_State: {fileID: 1102174262711262140}
-    m_Position: {x: 200, y: 0, z: 0}
->>>>>>> Level-Design
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -147,8 +94,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-<<<<<<< HEAD
-  m_DefaultState: {fileID: 1102427189137750878}
-=======
-  m_DefaultState: {fileID: 1102174262711262140}
->>>>>>> Level-Design
+  m_DefaultState: {fileID: 1102835609740112088}

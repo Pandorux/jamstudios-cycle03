@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e8cef4aea5fa9914f8180976bf42e5da
 timeCreated: 1528059385
+=======
+guid: ebf051cc11eee18468920b02899c669a
+timeCreated: 1528066448
+>>>>>>> Level-Design
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
