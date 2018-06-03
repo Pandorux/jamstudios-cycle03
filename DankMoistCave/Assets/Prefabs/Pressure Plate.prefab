@@ -36,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1129645608728224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.16, y: 0.9985068, z: -0.15}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 20.1, y: 0, z: -0.15}
+  m_LocalScale: {x: 1, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,15 +57,15 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.24, y: 0.03}
-    newSize: {x: 2.56, y: 2.56}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96, y: 0.12}
+    newSize: {x: 0.96, y: 0.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23, y: 0.11}
+  m_Size: {x: 0.65, y: 0.11}
   m_EdgeRadius: 0
 --- !u!114 &114471526592216690
 MonoBehaviour:
@@ -81,7 +81,18 @@ MonoBehaviour:
   m_IsOn: 0
   m_On:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: TurnOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_Off:
@@ -89,8 +100,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_DownSprite: {fileID: 21300008, guid: 8c3ad3676ca1669409c8914c40fffa3f, type: 3}
-  m_UpSprite: {fileID: 21300010, guid: 8c3ad3676ca1669409c8914c40fffa3f, type: 3}
+  m_DownSprite: {fileID: 21300072, guid: 64bfada945ec51c438761b58dbaff52b, type: 3}
+  m_UpSprite: {fileID: 21300070, guid: 64bfada945ec51c438761b58dbaff52b, type: 3}
 --- !u!212 &212886194023335098
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -123,14 +134,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -753745065
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 8c3ad3676ca1669409c8914c40fffa3f, type: 3}
+  m_Sprite: {fileID: 21300070, guid: 64bfada945ec51c438761b58dbaff52b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.96, y: 0.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

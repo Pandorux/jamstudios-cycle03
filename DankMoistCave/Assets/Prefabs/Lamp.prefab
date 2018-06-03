@@ -64,8 +64,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1456446767823740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.82, y: 2.19, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalPosition: {x: 41.3, y: 3.8, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4791630826561164}
   m_Father: {fileID: 0}
@@ -81,7 +81,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.39655176, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 73.9
   m_CookieSize: 10
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Type: 1
   m_Light: {fileID: 108800221694491986}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Warmth: 0
-  m_LightOn: 1
+  m_LightOn: 0
 --- !u!212 &212429392361346820
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -155,14 +155,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -115284175
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b796e30bd9223146ad958a854b23848, type: 3}
+  m_Sprite: {fileID: 21300014, guid: 64bfada945ec51c438761b58dbaff52b, type: 3}
   m_Color: {r: 0.45490196, g: 0.79607844, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.56, y: 1.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
