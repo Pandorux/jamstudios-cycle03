@@ -1,7 +1,10 @@
 Base path: C:/Program Files/Unity/Hub/Editor/2017.3.1f1/Editor/Data
 Cmd: initializeCompiler
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 Cmd: preprocess
   insize=1459 outsize=461 ok=1
@@ -124,4 +127,7 @@ Cmd: compileSnippet
 >>>>>>> Level-Design
 =======
 >>>>>>> Level-Design
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
