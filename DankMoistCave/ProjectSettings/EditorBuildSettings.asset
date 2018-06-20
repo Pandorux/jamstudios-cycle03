@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Level02.unity
     guid: 7c4af4c69f12854438d3627ff9235b87
+  - enabled: 1
+    path: Assets/_Scenes/Aimee_Test00.unity
+    guid: 83e3eea52a8a6db4d921c0104907364c

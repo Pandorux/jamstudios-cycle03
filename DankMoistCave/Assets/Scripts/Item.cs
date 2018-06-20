@@ -6,7 +6,7 @@ public class Item : MonoBehaviour, IHoldable {
 
     [Tooltip("Is this item being hold by something?")]
     [SerializeField]
-    private string m_Name;
+    private string m_ItemName;
 
     [Tooltip("Is this item being hold by something?")]
     [SerializeField]
@@ -38,7 +38,7 @@ public class Item : MonoBehaviour, IHoldable {
 
     public string GetName()
     {
-        return m_Name;
+        return m_ItemName;
     }
 
 }
