@@ -80,12 +80,23 @@ public class GameController : SingletonBase<GameController> {
         }
     }
 
-	public void VignetteControl(){
+	public void VignetteControl()
+    {
+        // Normalize Value
         float curDif;
         curDif = player.m_BodyTemperature.GetCurrentTemp() - player.m_BodyTemperature.GetFatalTemp();
         curDif /= dif;
         curDif = curDif > 1 ? 0 : 1 - curDif;
+
+
         frozencorpse.vignette.settings.intensity = curDif;
+        //frozencorpse.colorGrading.settings.basic.saturation = 1 - curDif;
+
+    }
+
+    public void SaturationControl()
+    {
+        float curDif;
 
     }
 
